@@ -8,6 +8,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private float _groundDistance = 0.4f;
     [SerializeField] private LayerMask _groundMask;
 
+    [SerializeField] private float _lowSpeed = 1f;
     [SerializeField] private float _normalSpeed = 2f;
     [SerializeField] private float _highSpeed = 4f;
 
@@ -52,6 +53,8 @@ public class Player_Movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
             _defaultSpeed = _highSpeed;
+        if (Input.GetKey(KeyCode.LeftControl))
+            _defaultSpeed = _lowSpeed;
 
         _xPos = Input.GetAxis("Horizontal");
         _zPos = Input.GetAxis("Vertical");
