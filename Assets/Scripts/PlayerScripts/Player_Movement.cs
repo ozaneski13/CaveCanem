@@ -6,7 +6,7 @@ public class Player_Movement : MonoBehaviour
 
     [SerializeField] private Transform _groundCheck = null;
     [SerializeField] private float _groundDistance = 0.4f;
-    [SerializeField] private LayerMask _groundMask;
+    [SerializeField] private LayerMask _groundLayerMask;
 
     [SerializeField] private float _lowSpeed = 1f;
     [SerializeField] private float _normalSpeed = 2f;
@@ -44,7 +44,7 @@ public class Player_Movement : MonoBehaviour
             return;
         }
 
-        _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
+        _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundLayerMask);
 
         if (_isGrounded && _velocity.y < 0)
             _velocity.y = -2f;

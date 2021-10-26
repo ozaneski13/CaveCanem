@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Next scene loading.");
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SaveSystem.LoadPlayer()._level);
     }
 
     public void QuitGame()
