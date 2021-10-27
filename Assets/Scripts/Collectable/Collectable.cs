@@ -1,12 +1,14 @@
 using System;
 using UnityEngine;
 
+//Add collectable interface.
+
 public class Collectable : MonoBehaviour
 {
     [SerializeField] private MeshRenderer _meshRenderer = null;
     [SerializeField] private BoxCollider _boxCollider = null;
 
-    public Action<GameObject> CollectableCollected;
+    public Action CollectableCollected;
 
     private bool _isCollected = false;
     
@@ -15,7 +17,7 @@ public class Collectable : MonoBehaviour
         if (_isCollected)
             return;
 
-        CollectableCollected?.Invoke(gameObject);
+        CollectableCollected?.Invoke();
 
         _isCollected = true;
 

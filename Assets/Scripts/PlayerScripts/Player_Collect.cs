@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//Integrate with collect animation.
+
 public class Player_Collect : MonoBehaviour
 {
     [SerializeField] private CharacterController _characterController = null;

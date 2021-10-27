@@ -1,3 +1,5 @@
+//Add aid kit, dog food and so on.
+
 [System.Serializable]
 public class PlayerData
 {

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Add collectable controls after new types of colelctables.
+
 public class CollectableListener : MonoBehaviour
 {
     [SerializeField] private List<Collectable> _collectables = null;
@@ -29,7 +31,7 @@ public class CollectableListener : MonoBehaviour
             col.CollectableCollected -= CollectableCollected;
     }
 
-    private void CollectableCollected(GameObject go)
+    private void CollectableCollected()
     {
         _collectableCount++;
     }

@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//Add other things like first aid count, dog food and so on.
+
 public class Player : MonoBehaviour
 {
     public static Player Instance;

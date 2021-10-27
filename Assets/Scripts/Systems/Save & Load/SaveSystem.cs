@@ -2,6 +2,8 @@ using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
+//Save the game after success.
+
 public static class SaveSystem
 {
     public static void SavePlayer(Player player)
