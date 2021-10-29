@@ -1501,6 +1501,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 195045413618129526, guid: a23e2bf5ede11554da8c7cb92c88f850, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6552009776649822350, guid: a23e2bf5ede11554da8c7cb92c88f850, type: 3}
       propertyPath: m_Name
       value: FlashlightModel
