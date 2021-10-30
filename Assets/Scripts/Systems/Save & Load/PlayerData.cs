@@ -4,13 +4,15 @@
 public class PlayerData
 {
     public int _level;
-    public int _health;
+    public int _healthCount;
     public int _coin;
+    public int _maximumHealth;
 
     public PlayerData(Player player)
     {
         _level = player.Level;
-        _health = player.Health;
+        _healthCount = player.HealthCount;
         _coin = player.Coin;
+        _maximumHealth = player.MaximumHealth;
     }
 }

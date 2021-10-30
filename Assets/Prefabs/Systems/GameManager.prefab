@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectables: []
-  _collectableCount: 0
+  _collectableCount: 1

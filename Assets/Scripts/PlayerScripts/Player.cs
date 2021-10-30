@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private HealthBar _healthBar = null;
+
     public static Player Instance;
 
     private void Awake()
@@ -21,11 +23,18 @@ public class Player : MonoBehaviour
         set { _coin = value; }
     }
 
-    private int _health;
-    public int Health
+    private int _healthCount;
+    public int HealthCount
     {
-        get { return _health; }
-        set { _health = value; }
+        get { return _healthCount; }
+        set { _healthCount = value; }
+    }
+
+    private int _maximumHealth;
+    public int MaximumHealth
+    {
+        get { return _maximumHealth; }
+        set { _maximumHealth = value; }
     }
 
     private int _level;
@@ -38,7 +47,18 @@ public class Player : MonoBehaviour
     public void LoadSave()
     {
         _coin = SaveSystem.LoadPlayer()._coin;
-        _health = SaveSystem.LoadPlayer()._health;
+        _healthCount = SaveSystem.LoadPlayer()._healthCount;
+        _maximumHealth = SaveSystem.LoadPlayer()._maximumHealth;
         _level = SaveSystem.LoadPlayer()._level;
+    }
+
+    private void TakeDamage(int damage)
+    {
+        _healthBar.DecreaseHealth(damage);
+    }
+
+    private void GetHeal(int heal)
+    {
+        _healthBar.IncreaseHealth(heal);
     }
 }
