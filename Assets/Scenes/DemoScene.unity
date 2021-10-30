@@ -511,6 +511,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8359068255735422468, guid: 62147f4132a636a49a9d9d770a89c896, type: 3}
   m_PrefabInstance: {fileID: 637989476}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &833549838 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8359068255735422464, guid: 62147f4132a636a49a9d9d770a89c896, type: 3}
+  m_PrefabInstance: {fileID: 637989476}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5332f3ce609262d4bbba44348db51f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1006611713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,6 +1156,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751358198}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1762508256 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5520266175029852322, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
+  m_PrefabInstance: {fileID: 5520266176398394971}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576cb3c42b2a368418def34cd0cebe8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1823289120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,6 +1365,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1959323818747153956, guid: 109f957356983b54dac469a6e80de314, type: 3}
+      propertyPath: _collectableListener
+      value: 
+      objectReference: {fileID: 1762508256}
     - target: {fileID: 3256369886605467084, guid: 109f957356983b54dac469a6e80de314, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1448,6 +1474,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5520266175029852322, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
+      propertyPath: _collectables.Array.data[0]
+      value: 
+      objectReference: {fileID: 833549838}
     - target: {fileID: 5520266175029852332, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
       propertyPath: m_Name
       value: GameManager

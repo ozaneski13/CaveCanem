@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class CollectableListener : MonoBehaviour
     [SerializeField] private List<Collectable> _collectables = null;
 
     public int _collectableCount = 0;
+
+    public Action OnCollectableCollected;
 
     private void Awake()
     {
@@ -33,6 +36,7 @@ public class CollectableListener : MonoBehaviour
 
     private void CollectableCollected()
     {
+        OnCollectableCollected?.Invoke();
         _collectableCount++;
     }
 }
