@@ -19,6 +19,7 @@ public class Player_Flashlight : MonoBehaviour
 
     private IEnumerator _timerRoutine = null;
     private IEnumerator _flashlightAnimRoutine = null;
+    private IEnumerator _flashlightLowBatteryAnim = null;
 
     private void Awake()
     {
@@ -52,7 +53,8 @@ public class Player_Flashlight : MonoBehaviour
 
         _isEnoughBattery = false;
 
-        ToggleFlashlight();
+        _flashlightLowBatteryAnim = FlashlightLowBatteryAnim();
+        StartCoroutine(_flashlightLowBatteryAnim);
     }
 
     private IEnumerator FlashlightAnimRoutine()
@@ -82,5 +84,28 @@ public class Player_Flashlight : MonoBehaviour
         }
 
         yield return null;
+    }
+
+    private IEnumerator FlashlightLowBatteryAnim()
+    {
+        _flashlightLight.enabled = false;
+
+        yield return new WaitForSeconds(0.5f);
+
+        _flashlightLight.enabled = true;
+
+        yield return new WaitForSeconds(0.5f);
+
+        _flashlightLight.enabled = false;
+
+        yield return new WaitForSeconds(0.5f);
+
+        _flashlightLight.enabled = true;
+
+        yield return new WaitForSeconds(0.5f);
+
+        _flashlightLight.enabled = false;
+
+        ToggleFlashlight();
     }
 }

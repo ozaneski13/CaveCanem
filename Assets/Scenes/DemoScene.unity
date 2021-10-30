@@ -1509,6 +1509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlashlightModel
       objectReference: {fileID: 0}
+    - target: {fileID: 6962970731781149150, guid: a23e2bf5ede11554da8c7cb92c88f850, type: 3}
+      propertyPath: _batteryTime
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7516612170116420845, guid: a23e2bf5ede11554da8c7cb92c88f850, type: 3}
       propertyPath: m_Name
       value: Player
