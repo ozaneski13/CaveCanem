@@ -14,10 +14,32 @@ public class HealthBar : MonoBehaviour
 
     private bool _isPoisoned = false;
 
+    private void Awake()
+    {
+        RegisterToEvents();
+    }
+
     private void Start()
     {
         _maximumHealth= Player.Instance.MaximumHealth;
         _currentHealth = _maximumHealth;
+    }
+
+    private void OnDestroy()
+    {
+        UnregisterFromEvents();
+    }
+
+    private void RegisterToEvents()
+    {
+        Player.Instance.OnDamage += DecreaseHealth;
+        Player.Instance.OnHeal += IncreaseHealth;
+    }
+
+    private void UnregisterFromEvents()
+    {
+        Player.Instance.OnDamage -= DecreaseHealth;
+        Player.Instance.OnHeal -= IncreaseHealth;
     }
 
     public void IncreaseHealth(int health)

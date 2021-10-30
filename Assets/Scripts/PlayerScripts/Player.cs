@@ -1,12 +1,14 @@
+using System;
 using UnityEngine;
 
 //Add other things like first aid count, dog food and so on.
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private HealthBar _healthBar = null;
-
     public static Player Instance;
+
+    public Action<int> OnDamage;
+    public Action<int> OnHeal;
 
     private void Awake()
     {
@@ -54,11 +56,11 @@ public class Player : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
-        _healthBar.DecreaseHealth(damage);
+        OnDamage?.Invoke(damage);
     }
 
     private void GetHeal(int heal)
     {
-        _healthBar.IncreaseHealth(heal);
+        OnHeal?.Invoke(heal);
     }
 }
