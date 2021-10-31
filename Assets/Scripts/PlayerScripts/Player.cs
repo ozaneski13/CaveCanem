@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public Action<int> OnDamage;
     public Action<int> OnHeal;
 
+    #region Singleton
     private void Awake()
     {
         if (Instance == null)
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
 
         LoadSave();
     }
+    #endregion
 
     private int _coin;
     public int Coin
