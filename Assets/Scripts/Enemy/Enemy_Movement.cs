@@ -17,6 +17,7 @@ public class Enemy_Movement : MonoBehaviour
     private IEnumerator _chaseRoutine = null;
 
     private float _distance = 0f;
+    private float _passedTime = 0f;
 
     private bool _isChasing = false;
 
@@ -38,6 +39,9 @@ public class Enemy_Movement : MonoBehaviour
                 _chaseRoutine = ChaseRoutine();
                 StartCoroutine(_chaseRoutine);
             }
+
+            else if (_isChasing)
+                _passedTime = 0f;
 
             if (_distance <= _navMeshAgent.stoppingDistance)
             {
@@ -64,11 +68,11 @@ public class Enemy_Movement : MonoBehaviour
     {
         _isChasing = true;
 
-        float passedTime = 0f;
+        _passedTime = 0f;
 
-        while (passedTime < _interestTime)
+        while (_passedTime < _interestTime)
         {
-            passedTime += Time.deltaTime;
+            _passedTime += Time.deltaTime;
 
             _navMeshAgent.SetDestination(_player.position);
 
