@@ -5,9 +5,8 @@ public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Slider _slider = null;
     [SerializeField] private Image _filler = null;
-    [SerializeField] private Gradient _gradient = null;
-
-    [SerializeField] private Color _poisonedColor = Color.green;
+    [SerializeField] private Gradient _normalGradient = null;
+    [SerializeField] private Gradient _poisonedGradient = null;
 
     private float _maximumHealth = 100;
     private float _currentHealth = 100;
@@ -47,9 +46,9 @@ public class HealthBar : MonoBehaviour
             _currentHealth += health;
 
         if (_isPoisoned)
-            _filler.color = _poisonedColor;
+            _filler.color = _poisonedGradient.Evaluate(_currentHealth / _maximumHealth);
         else
-            _filler.color = _gradient.Evaluate(_currentHealth / _maximumHealth);
+            _filler.color = _normalGradient.Evaluate(_currentHealth / _maximumHealth);
 
         _slider.value = _currentHealth;
     }
@@ -62,9 +61,9 @@ public class HealthBar : MonoBehaviour
             _currentHealth = 0;
 
         if (_isPoisoned)
-            _filler.color = _poisonedColor;
+            _filler.color = _poisonedGradient.Evaluate(_currentHealth / _maximumHealth);
         else
-            _filler.color = _gradient.Evaluate(_currentHealth / _maximumHealth);
+            _filler.color = _normalGradient.Evaluate(_currentHealth / _maximumHealth);
 
         _slider.value = _currentHealth;
     }

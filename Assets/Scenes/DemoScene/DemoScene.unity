@@ -1552,6 +1552,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6547612339056109284, guid: a23e2bf5ede11554da8c7cb92c88f850, type: 3}
+      propertyPath: _poisonedGradient.ctime1
+      value: 52428
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23e2bf5ede11554da8c7cb92c88f850, type: 3}
 --- !u!1001 &8684404218791026138
