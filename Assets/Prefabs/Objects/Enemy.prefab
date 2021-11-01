@@ -611,7 +611,6 @@ GameObject:
   - component: {fileID: 8684404220873464854}
   - component: {fileID: 8684404220873464855}
   - component: {fileID: 8684404220873464852}
-  - component: {fileID: 8684404220873464853}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -668,22 +667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c188c119437c2e444a305b2acc21daff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
   _navMeshAgent: {fileID: 8684404220873464855}
   _lookRadius: 5
   _rotationVariable: 5
---- !u!114 &8684404220873464853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8684404220873464849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6520fe6f11e1824478cefde6cf055e40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 10
-  _interestTime: 5
-  _isPoisonous: 0
+  _interestTime: 3
