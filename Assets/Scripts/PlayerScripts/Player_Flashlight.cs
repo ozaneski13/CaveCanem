@@ -15,16 +15,9 @@ public class Player_Flashlight : MonoBehaviour
     private bool _isFlashlightOn = false;
     private bool _isEnoughBattery = true;
 
-    private float _remainTime = 0f;
-
     private IEnumerator _timerRoutine = null;
     private IEnumerator _flashlightAnimRoutine = null;
     private IEnumerator _flashlightLowBatteryAnim = null;
-
-    private void Awake()
-    {
-        _remainTime = _batteryTime;
-    }
 
     private void Update()
     {
@@ -45,9 +38,11 @@ public class Player_Flashlight : MonoBehaviour
 
     private IEnumerator TimerRoutine()
     {
-        while (_remainTime > 0)
+        float remainTime = _batteryTime;
+
+        while (remainTime > 0)
         {
-            _remainTime -= Time.deltaTime;
+            remainTime -= Time.deltaTime;
             yield return null;
         }
 

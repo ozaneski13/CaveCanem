@@ -16,7 +16,6 @@ public class Enemy_Movement : MonoBehaviour
 
     private IEnumerator _chaseRoutine = null;
 
-    private float _distance = 0f;
     private float _passedTime = 0f;
 
     private bool _isChasing = false;
@@ -30,9 +29,9 @@ public class Enemy_Movement : MonoBehaviour
 
     private void Update()
     {
-        _distance = Vector3.Distance(_player.position, transform.position);
+        float distance = Vector3.Distance(_player.position, transform.position);
 
-        if (_distance <= _lookRadius)
+        if (distance <= _lookRadius)
         {
             if (!_isChasing)
             {
@@ -43,7 +42,7 @@ public class Enemy_Movement : MonoBehaviour
             else if (_isChasing)
                 _passedTime = 0f;
 
-            if (_distance <= _navMeshAgent.stoppingDistance)
+            if (distance <= _navMeshAgent.stoppingDistance)
             {
                 //Enemy_Attack.Attack();
                 FaceTarget();
