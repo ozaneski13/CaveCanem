@@ -1,60 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Enemy_Collision : MonoBehaviour
 {
-    [SerializeField] private Player_Movement _player;
-    [SerializeField] private CharacterController _characterController;
-    private float slideSpeed = 10f;
-    private bool collisionFlag = false;
+    [SerializeField] private CharacterController _characterController = null;
 
-    // Start is called before the first frame update
-    void Start()
+    private float _slideSpeed = 20f;
+    private bool _collisionFlag = false;
+
+    private void OnTriggerEnter(Collider other)
     {
-
+        _collisionFlag = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay(Collider other)
     {
-
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        print("object entered the trigger");
-        collisionFlag = true;
-    }
-
-    void OnTriggerStay(Collider other)
-    {
-
         Vector3 moveDirection = transform.forward;
 
-        //print("collision detected");
-
-        if (collisionFlag)
+        if (_collisionFlag)
         {
-            //if (other.gameObject.tag == "Enemy")
-            //{
-            //    print("collision object is enemy");
-            //    _characterController.Move(moveDirection * slideSpeed * Time.deltaTime);
-            //    collisionFlag = false;
-            //}
-            if(other.gameObject.layer == 8) //layer == "Enemy"
+            if(other.gameObject.layer == 8)
             {
-                print("collision object is enemy");
-                _characterController.Move(moveDirection * slideSpeed * Time.deltaTime);
-                collisionFlag = false;
+                _characterController.Move(moveDirection * _slideSpeed * Time.deltaTime);
+                _collisionFlag = false;
             }
         }
-
     }
 
     private void OnTriggerExit(Collider other)
     {
-        print("collision end");
-        collisionFlag = false;
+        _collisionFlag = false;
     }
 }
