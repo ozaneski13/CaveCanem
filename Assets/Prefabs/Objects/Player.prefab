@@ -228,10 +228,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterController: {fileID: 6547612337822918017}
   _groundCheck: {fileID: 6547612339221678145}
-  _groundDistance: 0.1
   _groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  _groundDistance: 0.1
   _lowSpeed: 1
   _normalSpeed: 2
   _highSpeed: 4
@@ -393,7 +393,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Add collectable controls after new types of colelctables.
+//Add collectable controls after new types of collectables.
 
 public class CollectableListener : MonoBehaviour
 {
     [SerializeField] private List<Collectable> _collectables = null;
 
-    public int _collectableCount = 0;
+    [SerializeField] private int _collectableCount = 0;
 
     public Action OnCollectableCollected;
 
