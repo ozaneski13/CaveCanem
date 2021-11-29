@@ -8,7 +8,8 @@ public class CollectableListener : MonoBehaviour
 {
     [SerializeField] private List<Collectable> _collectables = null;
 
-    [SerializeField] private int _collectableCount = 0;
+    private int _collectableCount = 0;
+    public int CollectableCount => _collectableCount;
 
     public Action OnCollectableCollected;
 

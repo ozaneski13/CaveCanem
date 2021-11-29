@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 4402271}
   - component: {fileID: 4402273}
   m_Layer: 6
-  m_Name: Grass (41)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 12472272}
   - component: {fileID: 12472271}
   m_Layer: 6
-  m_Name: Grass (129)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 19011694}
   - component: {fileID: 19011696}
   m_Layer: 6
-  m_Name: Grass (8)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -477,7 +477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Name
-      value: Road_2 (1)
+      value: Road
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Layer
@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 35075495}
   - component: {fileID: 35075497}
   m_Layer: 6
-  m_Name: Grass (21)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -662,7 +662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Name
-      value: Road_2 (5)
+      value: Road
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Layer
@@ -691,7 +691,7 @@ GameObject:
   - component: {fileID: 44311387}
   - component: {fileID: 44311386}
   m_Layer: 6
-  m_Name: Grass (121)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 60599772}
   - component: {fileID: 60599774}
   m_Layer: 6
-  m_Name: Grass (47)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -868,6 +868,91 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &72224339
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 894407840}
+    m_Modifications:
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 30.980001
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822529565170159912, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Name
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
 --- !u!1001 &82568338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1179,7 +1264,7 @@ GameObject:
   - component: {fileID: 108429950}
   - component: {fileID: 108429952}
   m_Layer: 6
-  m_Name: Grass (98)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1839,7 +1924,7 @@ GameObject:
   - component: {fileID: 136289305}
   - component: {fileID: 136289307}
   m_Layer: 6
-  m_Name: Grass (74)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1934,7 +2019,7 @@ GameObject:
   - component: {fileID: 139243887}
   - component: {fileID: 139243886}
   m_Layer: 6
-  m_Name: Grass (143)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2029,7 +2114,7 @@ GameObject:
   - component: {fileID: 141529841}
   - component: {fileID: 141529843}
   m_Layer: 6
-  m_Name: Grass (51)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2124,7 +2209,7 @@ GameObject:
   - component: {fileID: 164297314}
   - component: {fileID: 164297313}
   m_Layer: 6
-  m_Name: Grass (132)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2219,7 +2304,7 @@ GameObject:
   - component: {fileID: 181313500}
   - component: {fileID: 181313502}
   m_Layer: 6
-  m_Name: Grass (63)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2313,7 +2398,7 @@ GameObject:
   - component: {fileID: 184257059}
   - component: {fileID: 184257058}
   m_Layer: 6
-  m_Name: Cube (3)
+  m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3149,6 +3234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6660a7b189e95f34b9d96b73d7989bbf, type: 3}
+--- !u!4 &216127739 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+  m_PrefabInstance: {fileID: 1004274637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &230024407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6434948109781523795, guid: c1cdc38fdbb75d14c834592ef91b80d0, type: 3}
@@ -3167,7 +3257,7 @@ GameObject:
   - component: {fileID: 245047444}
   - component: {fileID: 245047446}
   m_Layer: 6
-  m_Name: Grass (14)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3312,7 +3402,7 @@ GameObject:
   - component: {fileID: 266571169}
   - component: {fileID: 266571171}
   m_Layer: 6
-  m_Name: Grass (91)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3425,7 +3515,7 @@ GameObject:
   - component: {fileID: 292270277}
   - component: {fileID: 292270275}
   m_Layer: 6
-  m_Name: Grass (118)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3516,7 +3606,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8359068255735422467, guid: 62147f4132a636a49a9d9d770a89c896, type: 3}
       propertyPath: m_Name
-      value: Coin (1)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8359068255735422468, guid: 62147f4132a636a49a9d9d770a89c896, type: 3}
       propertyPath: m_RootOrder
@@ -3577,7 +3667,7 @@ GameObject:
   - component: {fileID: 322243612}
   - component: {fileID: 322243614}
   m_Layer: 6
-  m_Name: Grass (114)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3672,7 +3762,7 @@ GameObject:
   - component: {fileID: 336305299}
   - component: {fileID: 336305301}
   m_Layer: 6
-  m_Name: Grass (82)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3767,7 +3857,7 @@ GameObject:
   - component: {fileID: 341910110}
   - component: {fileID: 341910109}
   m_Layer: 6
-  m_Name: Grass (142)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3862,7 +3952,7 @@ GameObject:
   - component: {fileID: 355010869}
   - component: {fileID: 355010871}
   m_Layer: 6
-  m_Name: Grass (38)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3957,7 +4047,7 @@ GameObject:
   - component: {fileID: 359522373}
   - component: {fileID: 359522375}
   m_Layer: 6
-  m_Name: Grass (116)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4039,6 +4129,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &365635999 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+  m_PrefabInstance: {fileID: 72224339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &365907247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4108,7 +4203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Name
-      value: Road_2 (8)
+      value: Road
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Layer
@@ -4137,7 +4232,7 @@ GameObject:
   - component: {fileID: 374961851}
   - component: {fileID: 374961853}
   m_Layer: 6
-  m_Name: Grass (71)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4232,7 +4327,7 @@ GameObject:
   - component: {fileID: 387811527}
   - component: {fileID: 387811529}
   m_Layer: 6
-  m_Name: Grass (58)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4327,7 +4422,7 @@ GameObject:
   - component: {fileID: 393901162}
   - component: {fileID: 393901164}
   m_Layer: 6
-  m_Name: Grass (81)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4422,7 +4517,7 @@ GameObject:
   - component: {fileID: 402497827}
   - component: {fileID: 402497829}
   m_Layer: 6
-  m_Name: Grass (48)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4559,6 +4654,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7326023311941016828, guid: 109f957356983b54dac469a6e80de314, type: 3}
+      propertyPath: _collectableListener
+      value: 
+      objectReference: {fileID: 406393758}
     - target: {fileID: 7637634902109401090, guid: 109f957356983b54dac469a6e80de314, type: 3}
       propertyPath: m_Name
       value: OverlayCanvas
@@ -4578,7 +4677,7 @@ GameObject:
   - component: {fileID: 403566329}
   - component: {fileID: 403566328}
   m_Layer: 6
-  m_Name: Grass (139)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4755,7 +4854,7 @@ GameObject:
   - component: {fileID: 441336770}
   - component: {fileID: 441336772}
   m_Layer: 6
-  m_Name: Grass (28)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4850,7 +4949,7 @@ GameObject:
   - component: {fileID: 444129444}
   - component: {fileID: 444129446}
   m_Layer: 6
-  m_Name: Grass (87)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4945,7 +5044,7 @@ GameObject:
   - component: {fileID: 449851073}
   - component: {fileID: 449851075}
   m_Layer: 6
-  m_Name: Grass (53)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5050,7 +5149,7 @@ GameObject:
   - component: {fileID: 460249883}
   - component: {fileID: 460249885}
   m_Layer: 6
-  m_Name: Grass (67)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5145,7 +5244,7 @@ GameObject:
   - component: {fileID: 467772976}
   - component: {fileID: 467772978}
   m_Layer: 6
-  m_Name: Grass (93)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5240,7 +5339,7 @@ GameObject:
   - component: {fileID: 474836508}
   - component: {fileID: 474836510}
   m_Layer: 6
-  m_Name: Grass (72)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6345,7 +6444,7 @@ GameObject:
   - component: {fileID: 523692836}
   - component: {fileID: 523692838}
   m_Layer: 6
-  m_Name: Grass (104)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6440,7 +6539,7 @@ GameObject:
   - component: {fileID: 524500768}
   - component: {fileID: 524500770}
   m_Layer: 6
-  m_Name: Grass (65)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6535,7 +6634,7 @@ GameObject:
   - component: {fileID: 527820614}
   - component: {fileID: 527820616}
   m_Layer: 6
-  m_Name: Grass (76)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6630,7 +6729,7 @@ GameObject:
   - component: {fileID: 535881373}
   - component: {fileID: 535881375}
   m_Layer: 6
-  m_Name: Grass (2)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6725,7 +6824,7 @@ GameObject:
   - component: {fileID: 540013757}
   - component: {fileID: 540013759}
   m_Layer: 6
-  m_Name: Grass (83)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6876,7 +6975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Name
-      value: Road_2 (4)
+      value: Road
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Layer
@@ -6905,7 +7004,7 @@ GameObject:
   - component: {fileID: 564757287}
   - component: {fileID: 564757289}
   m_Layer: 6
-  m_Name: Grass (16)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7000,7 +7099,7 @@ GameObject:
   - component: {fileID: 569323409}
   - component: {fileID: 569323411}
   m_Layer: 6
-  m_Name: Grass (33)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7094,7 +7193,7 @@ GameObject:
   - component: {fileID: 584520106}
   - component: {fileID: 584520105}
   m_Layer: 6
-  m_Name: Cube (2)
+  m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7135,6 +7234,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584520103}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &597759885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 597759886}
+  - component: {fileID: 597759888}
+  - component: {fileID: 597759887}
+  m_Layer: 6
+  m_Name: Border
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &597759886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597759885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 38.59}
+  m_LocalScale: {x: 40, y: 10, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1523011482}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &597759887
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597759885}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &597759888
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597759885}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &602968986
 GameObject:
   m_ObjectHideFlags: 0
@@ -7148,7 +7300,7 @@ GameObject:
   - component: {fileID: 602968989}
   - component: {fileID: 602968991}
   m_Layer: 6
-  m_Name: Grass (13)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7243,7 +7395,7 @@ GameObject:
   - component: {fileID: 607561958}
   - component: {fileID: 607561960}
   m_Layer: 6
-  m_Name: Grass (19)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7338,7 +7490,7 @@ GameObject:
   - component: {fileID: 628576648}
   - component: {fileID: 628576647}
   m_Layer: 6
-  m_Name: Grass (125)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7433,7 +7585,7 @@ GameObject:
   - component: {fileID: 628891323}
   - component: {fileID: 628891322}
   m_Layer: 6
-  m_Name: Grass (140)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7528,7 +7680,7 @@ GameObject:
   - component: {fileID: 651648098}
   - component: {fileID: 651648100}
   m_Layer: 6
-  m_Name: Grass (12)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7610,6 +7762,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &678736893 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+  m_PrefabInstance: {fileID: 854036160}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &681517265
 GameObject:
   m_ObjectHideFlags: 0
@@ -7623,7 +7780,7 @@ GameObject:
   - component: {fileID: 681517268}
   - component: {fileID: 681517270}
   m_Layer: 6
-  m_Name: Grass (106)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7710,6 +7867,91 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6434948109781523795, guid: c1cdc38fdbb75d14c834592ef91b80d0, type: 3}
   m_PrefabInstance: {fileID: 482087891}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &700851368
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 894407840}
+    m_Modifications:
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 26.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822529565170159912, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Name
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
 --- !u!1 &708005703
 GameObject:
   m_ObjectHideFlags: 0
@@ -7723,7 +7965,7 @@ GameObject:
   - component: {fileID: 708005706}
   - component: {fileID: 708005708}
   m_Layer: 6
-  m_Name: Grass (23)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7818,7 +8060,7 @@ GameObject:
   - component: {fileID: 761701495}
   - component: {fileID: 761701497}
   m_Layer: 6
-  m_Name: Grass (112)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7913,7 +8155,7 @@ GameObject:
   - component: {fileID: 767606907}
   - component: {fileID: 767606909}
   m_Layer: 6
-  m_Name: Grass (25)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8008,7 +8250,7 @@ GameObject:
   - component: {fileID: 791866451}
   - component: {fileID: 791866453}
   m_Layer: 6
-  m_Name: Grass (10)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8103,7 +8345,7 @@ GameObject:
   - component: {fileID: 810257540}
   - component: {fileID: 810257542}
   m_Layer: 6
-  m_Name: Grass (6)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8198,7 +8440,7 @@ GameObject:
   - component: {fileID: 815762064}
   - component: {fileID: 815762066}
   m_Layer: 6
-  m_Name: Grass (45)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8349,7 +8591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Name
-      value: Road_2 (3)
+      value: Road
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Layer
@@ -8378,7 +8620,7 @@ GameObject:
   - component: {fileID: 822842123}
   - component: {fileID: 822842125}
   m_Layer: 6
-  m_Name: Grass (92)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8478,7 +8720,7 @@ GameObject:
   - component: {fileID: 851676394}
   - component: {fileID: 851676396}
   m_Layer: 6
-  m_Name: Grass (110)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8560,6 +8802,91 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &854036160
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 894407840}
+    m_Modifications:
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 39.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822529565170159912, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Name
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
 --- !u!1 &871731594
 GameObject:
   m_ObjectHideFlags: 0
@@ -8573,7 +8900,7 @@ GameObject:
   - component: {fileID: 871731597}
   - component: {fileID: 871731596}
   m_Layer: 6
-  m_Name: Grass (145)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8668,7 +8995,7 @@ GameObject:
   - component: {fileID: 892246667}
   - component: {fileID: 892246666}
   m_Layer: 6
-  m_Name: Grass (130)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8786,6 +9113,13 @@ Transform:
   - {fileID: 452205592}
   - {fileID: 823580377}
   - {fileID: 455920616}
+  - {fileID: 1565351626}
+  - {fileID: 365635999}
+  - {fileID: 1881235996}
+  - {fileID: 678736893}
+  - {fileID: 928015536}
+  - {fileID: 216127739}
+  - {fileID: 1647931807}
   m_Father: {fileID: 248827400}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8818,7 +9152,7 @@ GameObject:
   - component: {fileID: 897671121}
   - component: {fileID: 897671123}
   m_Layer: 6
-  m_Name: Grass (50)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8913,7 +9247,7 @@ GameObject:
   - component: {fileID: 914448665}
   - component: {fileID: 914448667}
   m_Layer: 6
-  m_Name: Grass (15)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9008,7 +9342,7 @@ GameObject:
   - component: {fileID: 915834857}
   - component: {fileID: 915834859}
   m_Layer: 6
-  m_Name: Grass (61)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9159,7 +9493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Name
-      value: Road_2
+      value: Road
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Layer
@@ -9175,6 +9509,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+--- !u!4 &928015536 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+  m_PrefabInstance: {fileID: 1897529159}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &932785518
 GameObject:
   m_ObjectHideFlags: 0
@@ -9188,7 +9527,7 @@ GameObject:
   - component: {fileID: 932785521}
   - component: {fileID: 932785520}
   m_Layer: 6
-  m_Name: Grass (144)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10208,7 +10547,7 @@ GameObject:
   - component: {fileID: 955380086}
   - component: {fileID: 955380088}
   m_Layer: 6
-  m_Name: Grass (44)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10303,7 +10642,7 @@ GameObject:
   - component: {fileID: 958665975}
   - component: {fileID: 958665977}
   m_Layer: 6
-  m_Name: Grass (11)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10398,7 +10737,7 @@ GameObject:
   - component: {fileID: 969774418}
   - component: {fileID: 969774417}
   m_Layer: 6
-  m_Name: Grass (122)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10489,7 +10828,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8359068255735422467, guid: 62147f4132a636a49a9d9d770a89c896, type: 3}
       propertyPath: m_Name
-      value: Coin (2)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8359068255735422468, guid: 62147f4132a636a49a9d9d770a89c896, type: 3}
       propertyPath: m_RootOrder
@@ -10550,7 +10889,7 @@ GameObject:
   - component: {fileID: 985623542}
   - component: {fileID: 985623544}
   m_Layer: 6
-  m_Name: Grass (64)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10645,7 +10984,7 @@ GameObject:
   - component: {fileID: 998227967}
   - component: {fileID: 998227969}
   m_Layer: 6
-  m_Name: Grass (79)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10727,6 +11066,91 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &1004274637
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 894407840}
+    m_Modifications:
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 48.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822529565170159912, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Name
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
 --- !u!1 &1015630183
 GameObject:
   m_ObjectHideFlags: 0
@@ -10740,7 +11164,7 @@ GameObject:
   - component: {fileID: 1015630186}
   - component: {fileID: 1015630188}
   m_Layer: 6
-  m_Name: Grass (70)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10835,7 +11259,7 @@ GameObject:
   - component: {fileID: 1032425863}
   - component: {fileID: 1032425865}
   m_Layer: 6
-  m_Name: Grass (108)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10930,7 +11354,7 @@ GameObject:
   - component: {fileID: 1047697777}
   - component: {fileID: 1047697776}
   m_Layer: 6
-  m_Name: Grass (123)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11025,7 +11449,7 @@ GameObject:
   - component: {fileID: 1050916299}
   - component: {fileID: 1050916301}
   m_Layer: 6
-  m_Name: Grass (55)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11120,7 +11544,7 @@ GameObject:
   - component: {fileID: 1053703972}
   - component: {fileID: 1053703974}
   m_Layer: 6
-  m_Name: Grass (46)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11215,7 +11639,7 @@ GameObject:
   - component: {fileID: 1056461788}
   - component: {fileID: 1056461787}
   m_Layer: 6
-  m_Name: Grass (141)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11405,7 +11829,7 @@ GameObject:
   - component: {fileID: 1077231708}
   - component: {fileID: 1077231707}
   m_Layer: 6
-  m_Name: Grass (126)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11676,7 +12100,7 @@ GameObject:
   - component: {fileID: 1122352162}
   - component: {fileID: 1122352164}
   m_Layer: 6
-  m_Name: Grass (54)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11771,7 +12195,7 @@ GameObject:
   - component: {fileID: 1137581579}
   - component: {fileID: 1137581581}
   m_Layer: 6
-  m_Name: Grass (94)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11922,7 +12346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Name
-      value: Road_2 (7)
+      value: Road
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Layer
@@ -11951,7 +12375,7 @@ GameObject:
   - component: {fileID: 1155856338}
   - component: {fileID: 1155856340}
   m_Layer: 6
-  m_Name: Grass (17)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12069,7 +12493,7 @@ GameObject:
   - component: {fileID: 1196892026}
   - component: {fileID: 1196892028}
   m_Layer: 6
-  m_Name: Grass (1)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12164,7 +12588,7 @@ GameObject:
   - component: {fileID: 1202107573}
   - component: {fileID: 1202107575}
   m_Layer: 6
-  m_Name: Grass (27)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12264,7 +12688,7 @@ GameObject:
   - component: {fileID: 1219201276}
   - component: {fileID: 1219201278}
   m_Layer: 6
-  m_Name: Grass (66)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12359,7 +12783,7 @@ GameObject:
   - component: {fileID: 1219952182}
   - component: {fileID: 1219952184}
   m_Layer: 6
-  m_Name: Grass (95)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12454,7 +12878,7 @@ GameObject:
   - component: {fileID: 1231335243}
   - component: {fileID: 1231335245}
   m_Layer: 6
-  m_Name: Grass (80)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12549,7 +12973,7 @@ GameObject:
   - component: {fileID: 1233298051}
   - component: {fileID: 1233298053}
   m_Layer: 6
-  m_Name: Grass (7)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12644,7 +13068,7 @@ GameObject:
   - component: {fileID: 1264086325}
   - component: {fileID: 1264086327}
   m_Layer: 6
-  m_Name: Grass (37)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12744,7 +13168,7 @@ GameObject:
   - component: {fileID: 1265539191}
   - component: {fileID: 1265539193}
   m_Layer: 6
-  m_Name: Grass (105)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12839,7 +13263,7 @@ GameObject:
   - component: {fileID: 1266577899}
   - component: {fileID: 1266577901}
   m_Layer: 6
-  m_Name: Grass (101)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12934,7 +13358,7 @@ GameObject:
   - component: {fileID: 1281325854}
   - component: {fileID: 1281325853}
   m_Layer: 6
-  m_Name: Grass (131)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13029,7 +13453,7 @@ GameObject:
   - component: {fileID: 1286755695}
   - component: {fileID: 1286755697}
   m_Layer: 6
-  m_Name: Grass (78)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13124,7 +13548,7 @@ GameObject:
   - component: {fileID: 1290438337}
   - component: {fileID: 1290438339}
   m_Layer: 6
-  m_Name: Grass (68)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13219,7 +13643,7 @@ GameObject:
   - component: {fileID: 1299109679}
   - component: {fileID: 1299109681}
   m_Layer: 6
-  m_Name: Grass (57)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13314,7 +13738,7 @@ GameObject:
   - component: {fileID: 1314483484}
   - component: {fileID: 1314483483}
   m_Layer: 6
-  m_Name: Grass (120)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13502,7 +13926,7 @@ GameObject:
   - component: {fileID: 1325902590}
   - component: {fileID: 1325902592}
   m_Layer: 6
-  m_Name: Grass (109)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13659,7 +14083,7 @@ GameObject:
   - component: {fileID: 1365722932}
   - component: {fileID: 1365722934}
   m_Layer: 6
-  m_Name: Grass (9)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13754,7 +14178,7 @@ GameObject:
   - component: {fileID: 1371675697}
   - component: {fileID: 1371675699}
   m_Layer: 6
-  m_Name: Grass (73)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13836,6 +14260,91 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &1423236434
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 894407840}
+    m_Modifications:
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 43.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822529565170159912, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Name
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
 --- !u!1 &1431606617
 GameObject:
   m_ObjectHideFlags: 0
@@ -13849,7 +14358,7 @@ GameObject:
   - component: {fileID: 1431606620}
   - component: {fileID: 1431606622}
   m_Layer: 6
-  m_Name: Grass (35)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13944,7 +14453,7 @@ GameObject:
   - component: {fileID: 1432464313}
   - component: {fileID: 1432464312}
   m_Layer: 6
-  m_Name: Grass (134)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14039,7 +14548,7 @@ GameObject:
   - component: {fileID: 1450848285}
   - component: {fileID: 1450848287}
   m_Layer: 6
-  m_Name: Grass (107)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14134,7 +14643,7 @@ GameObject:
   - component: {fileID: 1463211776}
   - component: {fileID: 1463211778}
   m_Layer: 6
-  m_Name: Grass (90)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14300,7 +14809,7 @@ GameObject:
   - component: {fileID: 1488708267}
   - component: {fileID: 1488708266}
   m_Layer: 6
-  m_Name: Grass (127)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14451,7 +14960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Name
-      value: Road_2 (2)
+      value: Road
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Layer
@@ -14467,6 +14976,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+--- !u!1 &1497506982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5874646949765201316, guid: 109f957356983b54dac469a6e80de314, type: 3}
+  m_PrefabInstance: {fileID: 403143442}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1516650006
 GameObject:
   m_ObjectHideFlags: 0
@@ -14480,7 +14994,7 @@ GameObject:
   - component: {fileID: 1516650009}
   - component: {fileID: 1516650011}
   m_Layer: 6
-  m_Name: Grass (85)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14575,7 +15089,7 @@ GameObject:
   - component: {fileID: 1516842916}
   - component: {fileID: 1516842918}
   m_Layer: 6
-  m_Name: Grass (30)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14670,7 +15184,7 @@ GameObject:
   - component: {fileID: 1522567270}
   - component: {fileID: 1522567269}
   m_Layer: 6
-  m_Name: Grass (137)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14783,6 +15297,7 @@ Transform:
   - {fileID: 1854026048}
   - {fileID: 584520104}
   - {fileID: 184257057}
+  - {fileID: 597759886}
   m_Father: {fileID: 248827400}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14799,7 +15314,7 @@ GameObject:
   - component: {fileID: 1529646868}
   - component: {fileID: 1529646870}
   m_Layer: 6
-  m_Name: Grass (62)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14912,7 +15427,7 @@ GameObject:
   - component: {fileID: 1559081591}
   - component: {fileID: 1559081593}
   m_Layer: 6
-  m_Name: Grass (52)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15007,7 +15522,7 @@ GameObject:
   - component: {fileID: 1559328233}
   - component: {fileID: 1559328235}
   m_Layer: 6
-  m_Name: Grass (29)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15089,6 +15604,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1565351626 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+  m_PrefabInstance: {fileID: 1892950148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1570706415
 GameObject:
   m_ObjectHideFlags: 0
@@ -15102,7 +15622,7 @@ GameObject:
   - component: {fileID: 1570706418}
   - component: {fileID: 1570706420}
   m_Layer: 6
-  m_Name: Grass (49)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15197,7 +15717,7 @@ GameObject:
   - component: {fileID: 1573777830}
   - component: {fileID: 1573777832}
   m_Layer: 6
-  m_Name: Grass (99)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15292,7 +15812,7 @@ GameObject:
   - component: {fileID: 1576356377}
   - component: {fileID: 1576356379}
   m_Layer: 6
-  m_Name: Grass (20)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15387,7 +15907,7 @@ GameObject:
   - component: {fileID: 1590038951}
   - component: {fileID: 1590038953}
   m_Layer: 6
-  m_Name: Grass (26)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15482,7 +16002,7 @@ GameObject:
   - component: {fileID: 1602478355}
   - component: {fileID: 1602478357}
   m_Layer: 6
-  m_Name: Grass (100)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15577,7 +16097,7 @@ GameObject:
   - component: {fileID: 1602976094}
   - component: {fileID: 1602976096}
   m_Layer: 6
-  m_Name: Grass (40)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15672,7 +16192,7 @@ GameObject:
   - component: {fileID: 1612737274}
   - component: {fileID: 1612737276}
   m_Layer: 6
-  m_Name: Grass (36)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15767,7 +16287,7 @@ GameObject:
   - component: {fileID: 1621284399}
   - component: {fileID: 1621284401}
   m_Layer: 6
-  m_Name: Grass (102)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15862,7 +16382,7 @@ GameObject:
   - component: {fileID: 1632210783}
   - component: {fileID: 1632210785}
   m_Layer: 6
-  m_Name: Grass (24)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15944,6 +16464,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1647931807 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+  m_PrefabInstance: {fileID: 1423236434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1654040997
 GameObject:
   m_ObjectHideFlags: 0
@@ -15957,7 +16482,7 @@ GameObject:
   - component: {fileID: 1654041000}
   - component: {fileID: 1654041002}
   m_Layer: 6
-  m_Name: Grass (39)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16052,7 +16577,7 @@ GameObject:
   - component: {fileID: 1663581446}
   - component: {fileID: 1663581445}
   m_Layer: 6
-  m_Name: Grass (133)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16147,7 +16672,7 @@ GameObject:
   - component: {fileID: 1665084377}
   - component: {fileID: 1665084376}
   m_Layer: 6
-  m_Name: Grass (135)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16242,7 +16767,7 @@ GameObject:
   - component: {fileID: 1666732121}
   - component: {fileID: 1666732123}
   m_Layer: 6
-  m_Name: Grass (4)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16785,7 +17310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5155925296755476739, guid: c1cdc38fdbb75d14c834592ef91b80d0, type: 3}
       propertyPath: m_Name
-      value: House_3 (1)
+      value: House_3
       objectReference: {fileID: 0}
     - target: {fileID: 5155925296755476739, guid: c1cdc38fdbb75d14c834592ef91b80d0, type: 3}
       propertyPath: m_Layer
@@ -17347,7 +17872,7 @@ GameObject:
   - component: {fileID: 1691464160}
   - component: {fileID: 1691464162}
   m_Layer: 6
-  m_Name: Grass (77)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17442,7 +17967,7 @@ GameObject:
   - component: {fileID: 1729150171}
   - component: {fileID: 1729150173}
   m_Layer: 6
-  m_Name: Grass (32)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17537,7 +18062,7 @@ GameObject:
   - component: {fileID: 1730935877}
   - component: {fileID: 1730935879}
   m_Layer: 6
-  m_Name: Grass (34)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17637,7 +18162,7 @@ GameObject:
   - component: {fileID: 1801132204}
   - component: {fileID: 1801132206}
   m_Layer: 6
-  m_Name: Grass (31)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17753,7 +18278,7 @@ GameObject:
   - component: {fileID: 1818267810}
   - component: {fileID: 1818267812}
   m_Layer: 6
-  m_Name: Grass (117)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17847,7 +18372,7 @@ GameObject:
   - component: {fileID: 1840355510}
   - component: {fileID: 1840355509}
   m_Layer: 6
-  m_Name: Cube
+  m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17901,7 +18426,7 @@ GameObject:
   - component: {fileID: 1846932088}
   - component: {fileID: 1846932090}
   m_Layer: 6
-  m_Name: Grass (3)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17994,8 +18519,9 @@ GameObject:
   - component: {fileID: 1854026048}
   - component: {fileID: 1854026050}
   - component: {fileID: 1854026049}
+  - component: {fileID: 1854026051}
   m_Layer: 6
-  m_Name: Cube (1)
+  m_Name: EndBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18023,7 +18549,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854026047}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -18036,6 +18562,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854026047}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1854026051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854026047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335e62a2f595e604abe7f4adc8d67a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelEndUI: {fileID: 1497506982}
 --- !u!1 &1857004191
 GameObject:
   m_ObjectHideFlags: 0
@@ -18049,7 +18588,7 @@ GameObject:
   - component: {fileID: 1857004194}
   - component: {fileID: 1857004193}
   m_Layer: 6
-  m_Name: Grass (128)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18144,7 +18683,7 @@ GameObject:
   - component: {fileID: 1860552498}
   - component: {fileID: 1860552500}
   m_Layer: 6
-  m_Name: Grass (88)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18239,7 +18778,7 @@ GameObject:
   - component: {fileID: 1869299144}
   - component: {fileID: 1869299146}
   m_Layer: 6
-  m_Name: Grass (96)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18334,7 +18873,7 @@ GameObject:
   - component: {fileID: 1871185683}
   - component: {fileID: 1871185685}
   m_Layer: 6
-  m_Name: Grass (22)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18429,7 +18968,7 @@ GameObject:
   - component: {fileID: 1872067181}
   - component: {fileID: 1872067183}
   m_Layer: 6
-  m_Name: Grass (69)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18524,7 +19063,7 @@ GameObject:
   - component: {fileID: 1872543453}
   - component: {fileID: 1872543455}
   m_Layer: 6
-  m_Name: Grass (75)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18606,6 +19145,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1881235996 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+  m_PrefabInstance: {fileID: 700851368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1881842691
 GameObject:
   m_ObjectHideFlags: 0
@@ -18619,7 +19163,7 @@ GameObject:
   - component: {fileID: 1881842694}
   - component: {fileID: 1881842696}
   m_Layer: 6
-  m_Name: Grass (97)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18714,7 +19258,7 @@ GameObject:
   - component: {fileID: 1891615772}
   - component: {fileID: 1891615774}
   m_Layer: 6
-  m_Name: Grass (103)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18796,6 +19340,176 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &1892950148
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 894407840}
+    m_Modifications:
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822529565170159912, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Name
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+--- !u!1001 &1897529159
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 894407840}
+    m_Modifications:
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 35.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590463315378442529, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822529565170159912, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Name
+      value: Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078024788381499298, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
 --- !u!1 &1899552173
 GameObject:
   m_ObjectHideFlags: 0
@@ -18809,7 +19523,7 @@ GameObject:
   - component: {fileID: 1899552176}
   - component: {fileID: 1899552178}
   m_Layer: 6
-  m_Name: Grass (89)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18904,7 +19618,7 @@ GameObject:
   - component: {fileID: 1901488314}
   - component: {fileID: 1901488313}
   m_Layer: 6
-  m_Name: Grass (124)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19004,7 +19718,7 @@ GameObject:
   - component: {fileID: 1904178759}
   - component: {fileID: 1904178758}
   m_Layer: 6
-  m_Name: Grass (138)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19130,7 +19844,7 @@ GameObject:
   - component: {fileID: 1915852029}
   - component: {fileID: 1915852031}
   m_Layer: 6
-  m_Name: Grass (18)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19225,7 +19939,7 @@ GameObject:
   - component: {fileID: 1917542354}
   - component: {fileID: 1917542356}
   m_Layer: 6
-  m_Name: Grass (59)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19320,7 +20034,7 @@ GameObject:
   - component: {fileID: 1967932647}
   - component: {fileID: 1967932649}
   m_Layer: 6
-  m_Name: Grass (42)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19492,7 +20206,7 @@ GameObject:
   - component: {fileID: 1997853329}
   - component: {fileID: 1997853331}
   m_Layer: 6
-  m_Name: Grass (5)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19620,7 +20334,7 @@ GameObject:
   - component: {fileID: 2038129366}
   - component: {fileID: 2038129368}
   m_Layer: 6
-  m_Name: Grass (84)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19715,7 +20429,7 @@ GameObject:
   - component: {fileID: 2055760843}
   - component: {fileID: 2055760845}
   m_Layer: 6
-  m_Name: Grass (56)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19810,7 +20524,7 @@ GameObject:
   - component: {fileID: 2060220991}
   - component: {fileID: 2060220993}
   m_Layer: 6
-  m_Name: Grass (43)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19905,7 +20619,7 @@ GameObject:
   - component: {fileID: 2064743095}
   - component: {fileID: 2064743097}
   m_Layer: 6
-  m_Name: Grass (115)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20000,7 +20714,7 @@ GameObject:
   - component: {fileID: 2075233002}
   - component: {fileID: 2075233004}
   m_Layer: 6
-  m_Name: Grass (113)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20184,7 +20898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Name
-      value: Road_2 (6)
+      value: Road
       objectReference: {fileID: 0}
     - target: {fileID: 4193103067466014684, guid: 7345d675d42744849bfd8f4ac254eada, type: 3}
       propertyPath: m_Layer
@@ -20213,7 +20927,7 @@ GameObject:
   - component: {fileID: 2099548025}
   - component: {fileID: 2099548024}
   m_Layer: 6
-  m_Name: Grass (136)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20308,7 +21022,7 @@ GameObject:
   - component: {fileID: 2105148407}
   - component: {fileID: 2105148409}
   m_Layer: 6
-  m_Name: Grass (111)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20403,7 +21117,7 @@ GameObject:
   - component: {fileID: 2123223852}
   - component: {fileID: 2123223854}
   m_Layer: 6
-  m_Name: Grass (86)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20498,7 +21212,7 @@ GameObject:
   - component: {fileID: 2127961514}
   - component: {fileID: 2127961513}
   m_Layer: 6
-  m_Name: Grass (119)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20593,7 +21307,7 @@ GameObject:
   - component: {fileID: 2138878594}
   - component: {fileID: 2138878596}
   m_Layer: 6
-  m_Name: Grass (60)
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
