@@ -1,12 +1,11 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 //Add collectable controls after new types of collectables.
 
 public class CollectableListener : MonoBehaviour
 {
-    [SerializeField] private List<Collectable> _collectables = null;
+    private GameObject[] _collectables = null;
 
     private int _collectableCount = 0;
     public int CollectableCount => _collectableCount;
@@ -15,24 +14,19 @@ public class CollectableListener : MonoBehaviour
 
     private void Awake()
     {
+        GatherCollectables();
         RegisterToEvents();
     }
 
-    private void OnDestroy()
+    private void GatherCollectables()
     {
-        UnregisterFromEvents();
+        _collectables = GameObject.FindGameObjectsWithTag("Collectable");
     }
 
     private void RegisterToEvents()
     {
-        foreach (Collectable col in _collectables)
-            col.CollectableCollected += CollectableCollected;
-    }
-
-    private void UnregisterFromEvents()
-    {
-        foreach (Collectable col in _collectables)
-            col.CollectableCollected -= CollectableCollected;
+        foreach (GameObject go in _collectables)
+            go.GetComponent<Collectable>().CollectableCollected += CollectableCollected;
     }
 
     private void CollectableCollected()

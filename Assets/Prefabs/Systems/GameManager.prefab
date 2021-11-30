@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5520266175029852321}
   - component: {fileID: 5520266175029852322}
+  - component: {fileID: 4680742449397722368}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -43,6 +44,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576cb3c42b2a368418def34cd0cebe8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collectables:
-  - {fileID: 0}
-  _collectableCount: 1
+--- !u!114 &4680742449397722368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5520266175029852332}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7e2bfe075e5e34ba3937c3bb63f133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coinCount: 0
+  _maximumHealth: 100
+  _currentLevel: 1
+  _healthCount: 0

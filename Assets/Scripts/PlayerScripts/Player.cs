@@ -56,9 +56,12 @@ public class Player : MonoBehaviour
         _level = SaveSystem.LoadPlayer()._level;
     }
 
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        OnDamage?.Invoke(damage);
+        if (_maximumHealth > damage)
+            OnDamage?.Invoke(damage);
+        else
+            ;//Kill
     }
 
     private void GetHeal(int heal)

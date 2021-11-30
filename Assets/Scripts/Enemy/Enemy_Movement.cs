@@ -4,6 +4,8 @@ using UnityEngine.AI;
 
 public class Enemy_Movement : MonoBehaviour
 {
+    [SerializeField] private Enemy_Attack _enemyAttack = null;
+
     [SerializeField] private NavMeshAgent _navMeshAgent = null;
 
     [SerializeField] private float _lookRadius = 10f;
@@ -44,7 +46,7 @@ public class Enemy_Movement : MonoBehaviour
 
             if (distance <= _navMeshAgent.stoppingDistance)
             {
-                //Enemy_Attack.Attack();
+                _enemyAttack.Attack();
                 FaceTarget();
             }
         }
