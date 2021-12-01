@@ -39,6 +39,12 @@ public class PlayerDeathMenu : MonoBehaviour
         SceneManager.LoadScene(currentScene.name);
     }
 
+    public void OpenMarket()
+    {
+        //_marketUI.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit game.");

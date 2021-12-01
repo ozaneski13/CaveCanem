@@ -45,6 +45,8 @@ public class Player : MonoBehaviour
         set { _maximumHealth = value; }
     }
 
+    private int _currentMaximumHealth;
+
     private int _level;
     public int Level
     {
@@ -58,19 +60,32 @@ public class Player : MonoBehaviour
         _healthCount = SaveSystem.LoadPlayer()._healthCount;
         _maximumHealth = SaveSystem.LoadPlayer()._maximumHealth;
         _level = SaveSystem.LoadPlayer()._level;
+
+        _currentMaximumHealth = _maximumHealth;
     }
 
     public void TakeDamage(int damage)
     {
-        if (_maximumHealth > damage)
-            _maximumHealth -= damage;
+        if (_currentMaximumHealth > damage)
+            _currentMaximumHealth -= damage;
         else
         {
-            _maximumHealth = 0;
+            if (HealthCount > 0)
+            {
+                _currentMaximumHealth = _maximumHealth;
+                _healthCount--;
 
-            _animator.SetBool("Die", true);
+                OnHeal?.Invoke(_maximumHealth);
+            }
 
-            OnKill?.Invoke();
+            else
+            {
+                _currentMaximumHealth = 0;
+
+                _animator.SetBool("Die", true);
+
+                OnKill?.Invoke();
+            }
         }
 
         OnDamage?.Invoke(damage);

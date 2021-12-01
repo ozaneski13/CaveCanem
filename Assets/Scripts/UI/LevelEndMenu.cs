@@ -9,12 +9,8 @@ public class LevelEndMenu : MonoBehaviour
 
     [SerializeField] private float _timeScale = 0.2f;
 
-    private GameObject _levelEndUI = null;
-
     private void Awake()
     {
-        _levelEndUI = gameObject;
-
         Time.timeScale = _timeScale;
 
         UpdatePlayer();
@@ -36,8 +32,8 @@ public class LevelEndMenu : MonoBehaviour
 
     public void OpenMarket()
     {
-        _levelEndUI.SetActive(false);
         //_marketUI.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     private void UpdatePlayer()
