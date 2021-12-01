@@ -5,10 +5,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private Animator _animator = null;
+
     public static Player Instance;
 
     public Action<int> OnDamage;
     public Action<int> OnHeal;
+
+    public Action OnKill;
 
     #region Singleton
     private void Awake()
@@ -59,9 +63,17 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (_maximumHealth > damage)
-            OnDamage?.Invoke(damage);
+            _maximumHealth -= damage;
         else
-            ;//Kill
+        {
+            _maximumHealth = 0;
+
+            _animator.SetBool("Die", true);
+
+            OnKill?.Invoke();
+        }
+
+        OnDamage?.Invoke(damage);
     }
 
     private void GetHeal(int heal)

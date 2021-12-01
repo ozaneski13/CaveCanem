@@ -38,7 +38,7 @@ public class HealthBar : MonoBehaviour
         Player.Instance.OnHeal -= IncreaseHealth;
     }
 
-    public void IncreaseHealth(int health)
+    private void IncreaseHealth(int health)
     {
         if (_currentHealth + health > _maximumHealth)
             _currentHealth = _maximumHealth;
@@ -53,10 +53,10 @@ public class HealthBar : MonoBehaviour
         _slider.value = _currentHealth;
     }
 
-    public void DecreaseHealth(int health)
+    private void DecreaseHealth(int hit)
     {
-        if (_currentHealth > health)
-            _currentHealth -= health;
+        if (_currentHealth > hit)
+            _currentHealth -= hit;
         else
             _currentHealth = 0;
 
