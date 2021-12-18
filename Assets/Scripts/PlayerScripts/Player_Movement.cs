@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -18,12 +19,28 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private float _rotationSpeed = 100f;
 
     private Vector3 _velocity = Vector3.zero;
-
     private Vector3 _direction = Vector3.zero;
+
+    private bool _canWalk = true;
+    private bool _canJump = true;
+    private bool _canSlow = true;
+    private bool _canSprint = true;
+
+    private void Awake()
+    {
+        if (SceneManager.GetActiveScene().name == "TutorialLevel")
+        {
+            _canWalk = false;
+            _canJump = false;
+            _canSlow = false;
+            _canSprint = false;
+        }
+    }
 
     private void Update()
     {
-        Movement();
+        if (_canWalk)
+            Movement();
     }
 
     private void Movement()
@@ -49,14 +66,14 @@ public class Player_Movement : MonoBehaviour
 
         float defaultSpeed = _normalSpeed;
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && _canSprint)
         {
             _animator.SetBool("Idle", false);
             _animator.SetBool("Run", true);
             defaultSpeed = _highSpeed;
         }
 
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.LeftControl) && _canSlow)
         {
             _animator.SetBool("Idle", false);
             _animator.SetBool("Walk", true);//Slow walk anim
@@ -78,7 +95,7 @@ public class Player_Movement : MonoBehaviour
 
         float gravity = -9.81f;
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && _canJump)
         {
             _animator.SetBool("Jump", true);
             _velocity.y = Mathf.Sqrt(_jumpForce * -2f * gravity);
@@ -109,5 +126,17 @@ public class Player_Movement : MonoBehaviour
             _direction.y = 135;
         else if (xPos == -1 && zPos == 1)
             _direction.y = -45;
+    }
+
+    public void CanDo(int popUpIndex)
+    {
+        if (popUpIndex == 0)
+            _canWalk = true;
+        else if (popUpIndex == 1)
+            _canJump = true;
+        else if (popUpIndex == 2)
+            _canSprint = true;
+        else if (popUpIndex == 3)
+            _canSlow = true;
     }
 }

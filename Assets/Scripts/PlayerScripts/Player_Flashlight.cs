@@ -1,27 +1,35 @@
 using System.Collections;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 //Add click sound.
 //Limit flashlight control depends on day or night.
 
 public class Player_Flashlight : MonoBehaviour
 {
-    [SerializeField] private float _batteryTime = 60f;
     [SerializeField] private Light _flashlightLight = null;
     [SerializeField] private Transform _flashlight = null;
+    [SerializeField] private float _batteryTime = 60f;
     [SerializeField] private float _rotationDuration = 1f;
-
-    private bool _isFlashlightOn = false;
-    private bool _isEnoughBattery = true;
 
     private IEnumerator _timerRoutine = null;
     private IEnumerator _flashlightAnimRoutine = null;
     private IEnumerator _flashlightLowBatteryAnim = null;
 
+    private bool _isFlashlightOn = false;
+    private bool _isEnoughBattery = true;
+    private bool _canUse = true;
+
+    private void Awake()
+    {
+        if (SceneManager.GetActiveScene().name == "TutorialLevel")
+            _canUse = false;
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && _canUse)
             ToggleFlashlight();
     }
 
@@ -60,6 +68,8 @@ public class Player_Flashlight : MonoBehaviour
 
             if (_timerRoutine != null)
                 StopCoroutine(_timerRoutine);
+
+            yield return new WaitForSeconds(0.5f);
 
             _flashlightLight.enabled = false;
 
@@ -103,4 +113,6 @@ public class Player_Flashlight : MonoBehaviour
 
         ToggleFlashlight();
     }
+
+    public bool CanUse() => _canUse = true;
 }

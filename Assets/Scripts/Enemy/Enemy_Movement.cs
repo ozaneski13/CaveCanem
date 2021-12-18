@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Enemy_Movement : MonoBehaviour
 {
@@ -21,6 +22,13 @@ public class Enemy_Movement : MonoBehaviour
     private float _passedTime = 0f;
 
     private bool _isChasing = false;
+    private bool _canMove = true;
+
+    private void Awake()
+    {
+        if (SceneManager.GetActiveScene().name == "TutorialLevel")
+            _canMove = false;
+    }
 
     private void Start()
     {
@@ -31,18 +39,21 @@ public class Enemy_Movement : MonoBehaviour
 
     private void Update()
     {
-        float distance = Vector3.Distance(_player.position, transform.position);
-
-        if (distance <= _lookRadius)
+        if (_canMove)
         {
-            if (!_isChasing)
-            {
-                _chaseRoutine = ChaseRoutine(distance);
-                StartCoroutine(_chaseRoutine);
-            }
+            float distance = Vector3.Distance(_player.position, transform.position);
 
-            else if (_isChasing)
-                _passedTime = 0f;
+            if (distance <= _lookRadius)
+            {
+                if (!_isChasing)
+                {
+                    _chaseRoutine = ChaseRoutine(distance);
+                    StartCoroutine(_chaseRoutine);
+                }
+
+                else if (_isChasing)
+                    _passedTime = 0f;
+            }
         }
     }
 
@@ -93,4 +104,6 @@ public class Enemy_Movement : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _lookRadius);
     }
+
+    public void CanMove() => _canMove = true;
 }
