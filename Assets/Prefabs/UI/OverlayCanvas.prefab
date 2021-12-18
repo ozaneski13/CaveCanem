@@ -806,6 +806,7 @@ MonoBehaviour:
   _collectableListener: {fileID: 0}
   _healthCount: {fileID: 3256369887788212864}
   _coinCount: {fileID: 1486055313180919943}
+  _boneCount: {fileID: 0}
 --- !u!1 &3256369886318865851
 GameObject:
   m_ObjectHideFlags: 0

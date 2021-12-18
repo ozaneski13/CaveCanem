@@ -1,27 +1,25 @@
-using System;
 using UnityEngine;
+using System;
 
-//Add collectable interface.
-
-public class Collectable : MonoBehaviour
+public abstract class Collectable : MonoBehaviour, ICollectable
 {
     [SerializeField] private MeshRenderer _meshRenderer = null;
-    [SerializeField] private BoxCollider _boxCollider = null;
+    [SerializeField] private Collider _collider = null;
 
-    public Action CollectableCollected;
+    public Action<Collectable> CollectableCollected;
 
     private bool _isCollected = false;
-    
+
     public void GetCollected()
     {
         if (_isCollected)
             return;
 
-        CollectableCollected?.Invoke();
+        CollectableCollected?.Invoke(this);
 
         _isCollected = true;
 
-        _boxCollider.isTrigger = true;
+        _collider.isTrigger = true;
         _meshRenderer.enabled = false;
     }
 }

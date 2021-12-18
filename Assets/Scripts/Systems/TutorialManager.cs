@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using System;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -14,6 +13,8 @@ public class TutorialManager : MonoBehaviour
 
     [SerializeField] private Enemy_Movement _enemyMovement = null;
 
+    [SerializeField] private GameObject _tutorialBorder = null;
+
     [SerializeField] private float _waitTime = 2f;
 
     private IEnumerator _tutorialRoutine = null;
@@ -23,11 +24,9 @@ public class TutorialManager : MonoBehaviour
 
     private bool _isCollected = false;
 
-    public Action OnTutorialCompleted;
-
     private void Start()
     {
-        _collectableListener.OnCollectableCollected += Collected;
+        _collectableListener.OnCoinCollected += Collected;
 
         _tutorialRoutine = TutorialRoutine();
         StartCoroutine(_tutorialRoutine);
@@ -36,7 +35,7 @@ public class TutorialManager : MonoBehaviour
     private void OnDestroy()
     {
         if (_collectableListener != null)
-            _collectableListener.OnCollectableCollected -= Collected;
+            _collectableListener.OnCoinCollected -= Collected;
 
         if (_tutorialRoutine != null)
             StopCoroutine(_tutorialRoutine);
@@ -67,7 +66,7 @@ public class TutorialManager : MonoBehaviour
                     _popUpIndex++;
             }
 
-            else if (_popUpIndex == 2 && _isCollected)
+            else if (_popUpIndex == 2)
             {
                 _popUps[_popUpIndex - 1].SetActive(false);
                 _popUps[_popUpIndex].SetActive(true);
@@ -134,13 +133,13 @@ public class TutorialManager : MonoBehaviour
                 yield return new WaitForSeconds(_waitTime);
                 _popUps[_popUpIndex - 1].SetActive(false);
 
+                _tutorialBorder.SetActive(false);
+
                 break;
             }
 
             if (_popUpIndex != _dummyIndex)
             {
-                OnTutorialCompleted?.Invoke();
-
                 _dummyIndex = _popUpIndex;
                 yield return new WaitForSeconds(_waitTime);
             }

@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using DG.Tweening;
 using UnityEngine.SceneManagement;
 
 //Add click sound.
@@ -9,9 +8,7 @@ using UnityEngine.SceneManagement;
 public class Player_Flashlight : MonoBehaviour
 {
     [SerializeField] private Light _flashlightLight = null;
-    [SerializeField] private Transform _flashlight = null;
     [SerializeField] private float _batteryTime = 60f;
-    [SerializeField] private float _rotationDuration = 1f;
 
     private IEnumerator _timerRoutine = null;
     private IEnumerator _flashlightAnimRoutine = null;
@@ -64,8 +61,6 @@ public class Player_Flashlight : MonoBehaviour
     {
         if (_isFlashlightOn)
         {
-            _flashlight.DORotate(new Vector3(90f, _flashlight.rotation.y, _flashlight.rotation.z), _rotationDuration);
-
             if (_timerRoutine != null)
                 StopCoroutine(_timerRoutine);
 
@@ -78,8 +73,6 @@ public class Player_Flashlight : MonoBehaviour
 
         else if (!_isFlashlightOn && _isEnoughBattery)
         {
-            _flashlight.DORotate(new Vector3(0f, _flashlight.rotation.y, _flashlight.rotation.z), _rotationDuration);
-
             _flashlightLight.enabled = true;
 
             _isFlashlightOn = true;

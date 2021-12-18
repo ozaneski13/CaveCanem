@@ -132,11 +132,11 @@ public class Player_Movement : MonoBehaviour
     {
         if (popUpIndex == 0)
             _canWalk = true;
-        else if (popUpIndex == 1)
-            _canJump = true;
         else if (popUpIndex == 2)
-            _canSprint = true;
+            _canJump = true;
         else if (popUpIndex == 3)
+            _canSprint = true;
+        else if (popUpIndex == 4)
             _canSlow = true;
     }
 }

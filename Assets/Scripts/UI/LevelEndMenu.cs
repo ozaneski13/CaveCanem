@@ -7,10 +7,14 @@ public class LevelEndMenu : MonoBehaviour
 
     [SerializeField] private CollectableListener _collectableListener = null;
 
+    [SerializeField] private GameObject _tutorials = null;
+
     [SerializeField] private float _timeScale = 0.2f;
 
     private void Awake()
     {
+        _tutorials.SetActive(false);
+
         Time.timeScale = _timeScale;
 
         UpdatePlayer();
@@ -39,7 +43,7 @@ public class LevelEndMenu : MonoBehaviour
     private void UpdatePlayer()
     {
         Player.Instance.Level++;
-        Player.Instance.Coin += _collectableListener.CollectableCount;
+        Player.Instance.Coin += _collectableListener.CoinCount;
 
         SaveSystem.SavePlayer(Player.Instance);
     }
