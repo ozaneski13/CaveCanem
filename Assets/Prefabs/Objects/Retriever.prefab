@@ -72,8 +72,9 @@ GameObject:
   - component: {fileID: 8684404220873464855}
   - component: {fileID: 8684404220873464852}
   - component: {fileID: 7682601410027756515}
+  - component: {fileID: 5700361549956981343}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Retriever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,6 +148,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 10
   _durationBetweenAttacks: 3
+--- !u!114 &5700361549956981343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8684404220873464849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44a279294d286343ada3ad4def0be6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyType: 0
+  _damage: 20
+  _durationBetweenAttacks: 3
+  _lookRadius: 5
+  _rotationVariable: 5
+  _interestTime: 3
 --- !u!1001 &5561229791953801006
 PrefabInstance:
   m_ObjectHideFlags: 0

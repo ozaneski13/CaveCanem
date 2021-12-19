@@ -9,9 +9,7 @@ public class Enemy_Movement : MonoBehaviour
 
     [SerializeField] private NavMeshAgent _navMeshAgent = null;
 
-    [SerializeField] private float _lookRadius = 10f;
-    [SerializeField] private float _rotationVariable = 5f;
-    [SerializeField] private float _interestTime = 3f;
+    [SerializeField] private Enemy _enemy = null;
 
     private Transform _player = null;
 
@@ -19,6 +17,9 @@ public class Enemy_Movement : MonoBehaviour
 
     private IEnumerator _chaseRoutine = null;
 
+    private float _lookRadius;
+    private float _rotationVariable;
+    private float _interestTime;
     private float _passedTime = 0f;
 
     private bool _isChasing = false;
@@ -26,6 +27,10 @@ public class Enemy_Movement : MonoBehaviour
 
     private void Awake()
     {
+        _lookRadius = _enemy.LookRadius;
+        _rotationVariable = _enemy.RotationVariable;
+        _interestTime = _enemy.InterestTime;
+
         if (SceneManager.GetActiveScene().name == "TutorialLevel")
             _canMove = false;
     }

@@ -5,12 +5,21 @@ public class Enemy_Attack : MonoBehaviour
 {
     //[SerializeField] private Animator _animator = null;
 
-    [SerializeField] private int _damage = 10;
-    [SerializeField] private float _durationBetweenAttacks = 3f;
+    [SerializeField] private Enemy _enemy = null;
 
     private IEnumerator _attackRoutine = null;
 
+    private int _damage;
+
+    private float _durationBetweenAttacks;
+
     private bool _isAttacking = false;
+
+    private void Awake()
+    {
+        _damage = _enemy.Damage;
+        _durationBetweenAttacks = _enemy.DurationBetweenAttacks;
+    }
 
     private void OnDestroy()
     {
