@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HealthBar_Bilboard : MonoBehaviour
+public abstract class Bilboard : MonoBehaviour
 {
     [SerializeField] private Transform _camera = null;
 

@@ -7693,6 +7693,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171803532}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &175484918 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6547612339598234377, guid: a23e2bf5ede11554da8c7cb92c88f850, type: 3}
+  m_PrefabInstance: {fileID: 125966628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &178593416
 GameObject:
   m_ObjectHideFlags: 0
@@ -16437,10 +16442,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1907059832}
     m_Modifications:
-    - target: {fileID: 7682601410027756515, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
-      propertyPath: _enemy
-      value: 
-      objectReference: {fileID: 1376941988}
+    - target: {fileID: 3442358642476600260, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442358642476600260, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7682601410027756515, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
       propertyPath: _damage
       value: 20
@@ -16449,6 +16458,22 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 232162070}
+    - target: {fileID: 8369957435758719508, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 175484918}
+    - target: {fileID: 8369957435758719508, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
+      propertyPath: _colors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369957435758719508, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
+      propertyPath: _colors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369957435758719508, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
+      propertyPath: _colors.Array.data[2].a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8684404220873464849, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
       propertyPath: m_Name
       value: Retriever
@@ -16457,10 +16482,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8684404220873464852, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
-      propertyPath: _enemy
-      value: 
-      objectReference: {fileID: 1376941988}
     - target: {fileID: 8684404220873464854, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -54876,17 +54897,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372930767}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1376941988 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5700361549956981343, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
-  m_PrefabInstance: {fileID: 431701294}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e44a279294d286343ada3ad4def0be6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1379346988
 PrefabInstance:
   m_ObjectHideFlags: 0
