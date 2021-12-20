@@ -13,6 +13,8 @@ public class UICountsUpdater : MonoBehaviour
     private int _currentCoinCount = 0;
     private int _currentBoneCount = 0;
 
+    private Player _player = null;
+
     private void Awake()
     {
         RegisterToEvents();
@@ -20,11 +22,15 @@ public class UICountsUpdater : MonoBehaviour
 
     private void Start()
     {
+        _player = Player.Instance;
+
         _currentHealthCount = Player.Instance.HealthCount;
         _currentCoinCount = Player.Instance.Coin;
 
         _healthCount.text = _currentHealthCount.ToString();
         _coinCount.text = _currentCoinCount.ToString();
+
+        _player.OnHealthCountDecreased += DecreaseHealthCount;
     }
 
     private void OnDestroy()
@@ -44,6 +50,8 @@ public class UICountsUpdater : MonoBehaviour
         _collectableListener.OnCoinCollected -= IncreaseCoinCount;
         _collectableListener.OnBoneCollected -= IncreaseBoneCount;
         _collectableListener.OnHealthCollected -= IncreaseHealthCount;
+
+        _player.OnHealthCountDecreased -= DecreaseHealthCount;
     }
 
     private void IncreaseHealthCount()

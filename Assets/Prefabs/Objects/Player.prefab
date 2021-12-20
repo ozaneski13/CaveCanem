@@ -2254,9 +2254,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d4187f7a9612d4d9884ed5d023f31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerVisual: {fileID: 0}
+  _playerVisual: {fileID: 4544686119577258056}
   _characterController: {fileID: 6547612337822918017}
-  _animator: {fileID: 0}
+  _animator: {fileID: 2701933406557310405}
   _groundCheck: {fileID: 6547612339221678145}
   _groundLayerMask:
     serializedVersion: 2
@@ -2279,7 +2279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53b927fbcdc7924a9f38de416f4d4ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
+  _animator: {fileID: 2701933406557310405}
 --- !u!114 &3248274895598887105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2308,9 +2308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flashlightLight: {fileID: 8275785470300619506}
-  _flashlight: {fileID: 3474919155403827992}
   _batteryTime: 60
-  _rotationDuration: 1
 --- !u!114 &6773781340675799913
 MonoBehaviour:
   m_ObjectHideFlags: 0

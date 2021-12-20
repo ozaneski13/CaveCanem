@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private CollectableListener _collectableListener = null;
+
     [SerializeField] private Animator _animator = null;
 
     public static Player Instance;
@@ -13,16 +15,7 @@ public class Player : MonoBehaviour
     public Action<int> OnHeal;
 
     public Action OnKill;
-
-    #region Singleton
-    private void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-
-        LoadSave();
-    }
-    #endregion
+    public Action OnHealthCountDecreased;
 
     private int _coin;
     public int Coin
@@ -54,6 +47,38 @@ public class Player : MonoBehaviour
         set { _level = value; }
     }
 
+    #region Singleton
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+
+        LoadSave();
+    }
+    #endregion
+
+    private void Start()
+    {
+        RegisterToEvents();
+    }
+
+    private void OnDestroy()
+    {
+        UnregisterFromEvents();
+    }
+
+    private void RegisterToEvents()
+    {
+        _collectableListener.OnCoinCollected += GetCoin;
+        _collectableListener.OnHealthCollected += GetHealth;
+    }
+
+    private void UnregisterFromEvents()
+    {
+        _collectableListener.OnCoinCollected -= GetCoin;
+        _collectableListener.OnHealthCollected -= GetHealth;
+    }
+
     public void LoadSave()
     {
         _coin = SaveSystem.LoadPlayer()._coin;
@@ -75,6 +100,7 @@ public class Player : MonoBehaviour
                 _currentMaximumHealth = _maximumHealth;
                 _healthCount--;
 
+                OnHealthCountDecreased?.Invoke();
                 OnHeal?.Invoke(_maximumHealth);
             }
 
@@ -91,8 +117,18 @@ public class Player : MonoBehaviour
         OnDamage?.Invoke(damage);
     }
 
-    private void GetHeal(int heal)
+    private void GetCoin()
+    {
+        Coin++;
+    }
+
+    private void GetHealth()
+    {
+        HealthCount++;
+    }
+
+    /*private void GetHeal(int heal)
     {
         OnHeal?.Invoke(heal);
-    }
+    }*/
 }

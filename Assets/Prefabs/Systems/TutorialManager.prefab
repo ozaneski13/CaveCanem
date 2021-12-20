@@ -43,8 +43,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51a416b66ed7494fb0c6ac85860c27f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _popUps: []
+  _popUps:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _playerMovement: {fileID: 0}
   _playerFlashlight: {fileID: 0}
   _playerCollect: {fileID: 0}
+  _collectableListener: {fileID: 0}
   _enemyMovement: {fileID: 0}
+  _tutorialBorder: {fileID: 0}
+  _waitTime: 2

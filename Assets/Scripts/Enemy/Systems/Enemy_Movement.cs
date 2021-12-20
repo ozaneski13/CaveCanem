@@ -21,6 +21,7 @@ public class Enemy_Movement : MonoBehaviour
     private float _rotationVariable;
     private float _interestTime;
     private float _passedTime = 0f;
+    private float _distance;
 
     private bool _isChasing = false;
     private bool _canMove = true;
@@ -46,13 +47,13 @@ public class Enemy_Movement : MonoBehaviour
     {
         if (_canMove)
         {
-            float distance = Vector3.Distance(_player.position, transform.position);
+            _distance = Vector3.Distance(_player.position, transform.position);
 
-            if (distance <= _lookRadius)
+            if (_distance <= _lookRadius)
             {
                 if (!_isChasing)
                 {
-                    _chaseRoutine = ChaseRoutine(distance);
+                    _chaseRoutine = ChaseRoutine();
                     StartCoroutine(_chaseRoutine);
                 }
 
@@ -75,7 +76,7 @@ public class Enemy_Movement : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * _rotationVariable);
     }
 
-    private IEnumerator ChaseRoutine(float distance)
+    private IEnumerator ChaseRoutine()
     {
         _isChasing = true;
 
@@ -85,7 +86,7 @@ public class Enemy_Movement : MonoBehaviour
         {
             _passedTime += Time.deltaTime;
 
-            if (distance <= _navMeshAgent.stoppingDistance)
+            if (_distance <= _navMeshAgent.stoppingDistance)
             {
                 _enemyAttack.Attack();
                 FaceTarget();
