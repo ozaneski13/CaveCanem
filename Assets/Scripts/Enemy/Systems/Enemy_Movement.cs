@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -5,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Enemy_Movement : MonoBehaviour
 {
-    [SerializeField] private Enemy_Attack _enemyAttack = null;
-
     [SerializeField] private NavMeshAgent _navMeshAgent = null;
 
     [SerializeField] private Enemy _enemy = null;
@@ -25,6 +24,8 @@ public class Enemy_Movement : MonoBehaviour
 
     private bool _isChasing = false;
     private bool _canMove = true;
+
+    public Action OnAttack;
 
     private void Awake()
     {
@@ -88,10 +89,8 @@ public class Enemy_Movement : MonoBehaviour
 
             if (_distance <= _navMeshAgent.stoppingDistance)
             {
-                _enemyAttack.Attack();
+                OnAttack?.Invoke();
                 FaceTarget();
-
-                break;
             }
 
             else

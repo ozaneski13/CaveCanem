@@ -6,6 +6,7 @@ public class Enemy_Attack : MonoBehaviour
     //[SerializeField] private Animator _animator = null;
 
     [SerializeField] private Enemy _enemy = null;
+    [SerializeField] private Enemy_Movement _enemyMovement = null;
 
     private IEnumerator _attackRoutine = null;
 
@@ -19,14 +20,28 @@ public class Enemy_Attack : MonoBehaviour
     {
         _damage = _enemy.Damage;
         _durationBetweenAttacks = _enemy.DurationBetweenAttacks;
+
+        RegisterToEvents();
     }
 
     private void OnDestroy()
     {
         StopAllCoroutines();
+
+        UnregisterFromEvents();
     }
 
-    public void Attack()
+    private void RegisterToEvents()
+    {
+        _enemyMovement.OnAttack += Attack;
+    }
+
+    private void UnregisterFromEvents()
+    {
+        _enemyMovement.OnAttack -= Attack;
+    }
+
+    private void Attack()
     {
         if (_isAttacking)
             return;
