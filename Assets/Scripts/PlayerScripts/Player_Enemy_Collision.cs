@@ -3,8 +3,8 @@ using UnityEngine;
 public class Player_Enemy_Collision : MonoBehaviour
 {
     [SerializeField] private CharacterController _characterController = null;
+    [SerializeField] private float _slideSpeed = 20f;
 
-    private float _slideSpeed = 20f;
     private bool _collisionFlag = false;
 
     private void OnTriggerEnter(Collider other)
@@ -16,9 +16,9 @@ public class Player_Enemy_Collision : MonoBehaviour
     {
         Vector3 moveDirection = transform.forward;
 
-        if (_collisionFlag)
+        if (Player.Instance.transform.position.y > other.gameObject.transform.position.y)
         {
-            if(other.gameObject.layer == 8)
+            if (_collisionFlag && other.gameObject.layer == 8)
             {
                 _characterController.Move(moveDirection * _slideSpeed * Time.deltaTime);
                 _collisionFlag = false;
