@@ -5661,10 +5661,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.59102
       objectReference: {fileID: 0}
-    - target: {fileID: 6547612337822918016, guid: a23e2bf5ede11554da8c7cb92c88f850, type: 3}
-      propertyPath: _jumpForce
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6547612337822918019, guid: a23e2bf5ede11554da8c7cb92c88f850, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5921,7 +5917,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -0.58452916
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5498683215483937872, guid: a23e2bf5ede11554da8c7cb92c88f850, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a23e2bf5ede11554da8c7cb92c88f850, type: 3}
 --- !u!114 &125966629 stripped
 MonoBehaviour:
@@ -16412,14 +16409,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6788075396529165414, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
-      propertyPath: m_Size.y
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6788075396529165414, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
-      propertyPath: m_Center.y
-      value: 0.9
-      objectReference: {fileID: 0}
     - target: {fileID: 7682601410027756515, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
       propertyPath: _damage
       value: 20
@@ -16432,18 +16421,6 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 175484918}
-    - target: {fileID: 8369957435758719508, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
-      propertyPath: _colors.Array.data[0].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8369957435758719508, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
-      propertyPath: _colors.Array.data[1].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8369957435758719508, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
-      propertyPath: _colors.Array.data[2].a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8684404220873464849, guid: ccb8eaefb0d004748bd4253701678c00, type: 3}
       propertyPath: m_Name
       value: Retriever
@@ -78622,10 +78599,6 @@ PrefabInstance:
     - target: {fileID: 4680742449397722368, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680742449397722368, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
-      propertyPath: _currentLevel
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5520266175029852321, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
       propertyPath: m_RootOrder

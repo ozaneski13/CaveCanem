@@ -2198,7 +2198,6 @@ GameObject:
   - component: {fileID: 1116572432611924495}
   - component: {fileID: 3248274895598887105}
   - component: {fileID: 5921359087157469360}
-  - component: {fileID: 5498683215483937872}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -2265,7 +2264,7 @@ MonoBehaviour:
   _lowSpeed: 1
   _normalSpeed: 2
   _highSpeed: 4
-  _jumpForce: 2
+  _jumpForce: 1
   _rotationSpeed: 100
 --- !u!114 &1116572432611924495
 MonoBehaviour:
@@ -2310,20 +2309,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flashlightLight: {fileID: 8275785470300619506}
   _batteryTime: 60
---- !u!114 &5498683215483937872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6547612337822918019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 372d64e4fa594994c9d0c6aa80b9fbd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _characterController: {fileID: 6547612337822918017}
-  _slideSpeed: 20
 --- !u!1 &6547612338036147457
 GameObject:
   m_ObjectHideFlags: 0
