@@ -14,19 +14,43 @@ public class Player_Feed : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            GameObject closestEnemy = _enemyController.GetClosest();
+        Collectable feed = null;
 
-            float distance = Vector3.Distance(closestEnemy.transform.position, transform.position);
-
-            if (distance <= _distanceVar)
-                Feed(closestEnemy);
-        }
+        if (Input.GetKeyDown(KeyCode.B))
+            feed = new Bone();
+        /*else if (Input.GetKeyDown(KeyCode.N))
+            feed = new Food();*/
+        else
+            return;
+        
+        GameObject closestEnemy = _enemyController.GetClosest();
+        
+        float distance = Vector3.Distance(closestEnemy.transform.position, transform.position);
+        
+        if (distance <= _distanceVar)
+            Feed(closestEnemy, feed);
     }
 
-    private void Feed(GameObject closestEnemy)
+    private void Feed(GameObject closestEnemy, Collectable feed)
     {
+        Enemy enemy = closestEnemy.GetComponent<Enemy>();
+        int feedCount = 0;
+
+        if (feed is Bone)
+            feedCount = _player.BoneCount;
+        //else if (feed is Food)
+            //feedCount = _player.FoodCount;
+
+        if (feedCount == 0)
+        {
+            //UI I don't have any bones.
+
+            return;
+        }
+
+        _player.BoneCount--;
+        enemy.GetFeeded(feed);
+        //
         //Check bone count from player.
         //Check dog type.
     }

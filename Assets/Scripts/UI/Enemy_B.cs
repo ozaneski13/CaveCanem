@@ -10,24 +10,10 @@ public class Enemy_B : Bilboard
 
     private void Awake()
     {
-        int enemyType = _enemy.EnemyType;
+        int enemyType = (int)_enemy.EnemyType;
 
         _enemyIndicatorText.color = _colors[enemyType];
-
-        switch (enemyType)
-        {
-            case 0:
-                _enemyIndicatorText.text = "Aggressive";
-                break;
-
-            case 1:
-                _enemyIndicatorText.text = "Hungry";
-                break;
-
-            default:
-                _enemyIndicatorText.text = "Friendly";
-                break;
-        }
+        _enemyIndicatorText.text = _enemy.EnemyType.ToString();
 
         _enemyIndicatorText.SetAllDirty();
     }
