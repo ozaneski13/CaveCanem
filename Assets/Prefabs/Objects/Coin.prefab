@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8359068255735422470}
   - component: {fileID: 8359068255735422465}
   - component: {fileID: 3404095524716483230}
+  - component: {fileID: 1117879204168173172}
   m_Layer: 7
   m_Name: Coin
   m_TagString: Collectable
@@ -110,3 +111,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 8359068255735422470}
   _collider: {fileID: 8359068255735422465}
+--- !u!95 &1117879204168173172
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359068255735422467}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8bef3545465920442925172a95801ccb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
