@@ -6088,7 +6088,7 @@ RectTransform:
   - {fileID: 715399236}
   - {fileID: 1465508461}
   m_Father: {fileID: 945613920}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -15618,6 +15618,14 @@ PrefabInstance:
       propertyPath: _collectableListener
       value: 
       objectReference: {fileID: 406393758}
+    - target: {fileID: 3256369886605467085, guid: 109f957356983b54dac469a6e80de314, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351105578980288832, guid: 109f957356983b54dac469a6e80de314, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4116656066234684771, guid: 109f957356983b54dac469a6e80de314, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -15666,9 +15674,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5094283791961552883, guid: 109f957356983b54dac469a6e80de314, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6429717464797703728, guid: 109f957356983b54dac469a6e80de314, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7069170454472515797, guid: 109f957356983b54dac469a6e80de314, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106127040473640834, guid: 109f957356983b54dac469a6e80de314, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7106831878957757272, guid: 109f957356983b54dac469a6e80de314, type: 3}
       propertyPath: m_IsActive
@@ -15685,6 +15705,10 @@ PrefabInstance:
     - target: {fileID: 7637634902109401090, guid: 109f957356983b54dac469a6e80de314, type: 3}
       propertyPath: m_Name
       value: OverlayCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8420967142066351976, guid: 109f957356983b54dac469a6e80de314, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 109f957356983b54dac469a6e80de314, type: 3}
