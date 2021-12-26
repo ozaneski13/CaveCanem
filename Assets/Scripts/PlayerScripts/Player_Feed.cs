@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player_Feed : MonoBehaviour
@@ -6,6 +7,9 @@ public class Player_Feed : MonoBehaviour
     [SerializeField] private float _distanceVar = 1f;
 
     private Player _player = null;
+
+    public Action OnInsufficientBone;
+    public Action OnInsufficientFood;
 
     private void Start()
     {
@@ -18,8 +22,8 @@ public class Player_Feed : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.B))
             feed = new Bone();
-        /*else if (Input.GetKeyDown(KeyCode.N))
-            feed = new Food();*/
+        else if (Input.GetKeyDown(KeyCode.N))
+            feed = new Food();
         else
             return;
         
@@ -35,23 +39,34 @@ public class Player_Feed : MonoBehaviour
     {
         Enemy enemy = closestEnemy.GetComponent<Enemy>();
         int feedCount = 0;
+        bool isFood = true;
 
         if (feed is Bone)
+        {
             feedCount = _player.BoneCount;
-        //else if (feed is Food)
-            //feedCount = _player.FoodCount;
+            isFood = false;
+        }
+
+        else if (feed is Food)
+            feedCount = _player.FoodCount;
+        else
+            return;//You don't have any bones UI.
 
         if (feedCount == 0)
         {
-            //UI I don't have any bones.
+            if (isFood)
+                OnInsufficientFood?.Invoke();
+            else
+                OnInsufficientBone?.Invoke();
 
             return;
         }
 
-        _player.BoneCount--;
+        if (isFood)
+            _player.FoodCount--;
+        else
+            _player.BoneCount--;
+
         enemy.GetFeeded(feed);
-        //
-        //Check bone count from player.
-        //Check dog type.
     }
 }

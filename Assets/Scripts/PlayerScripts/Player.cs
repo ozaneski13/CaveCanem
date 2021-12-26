@@ -54,6 +54,13 @@ public class Player : MonoBehaviour
         set { _boneCount = value; }
     }
 
+    private int _foodCount;
+    public int FoodCount
+    {
+        get { return _foodCount; }
+        set { _foodCount = value; }
+    }
+
     #region Singleton
     private void Awake()
     {
@@ -93,6 +100,7 @@ public class Player : MonoBehaviour
         _maximumHealth = SaveSystem.LoadPlayer()._maximumHealth;
         _level = SaveSystem.LoadPlayer()._level;
         _boneCount = SaveSystem.LoadPlayer()._boneCount;
+        _foodCount = SaveSystem.LoadPlayer()._foodCount;
 
         _currentMaximumHealth = _maximumHealth;
     }

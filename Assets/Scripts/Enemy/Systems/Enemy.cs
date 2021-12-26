@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public abstract class Enemy : MonoBehaviour, IEnemy
 {
@@ -20,21 +21,23 @@ public abstract class Enemy : MonoBehaviour, IEnemy
     [SerializeField] private float _interestTime;
     public float InterestTime => _interestTime;
 
+    public Action OnEnemyHappy;
+
     public void GetFeeded(Collectable collectable)
     {
         switch(_enemyType)
         {
             case EEnemy.Aggressive:
                 if (collectable is Bone)
-                    //MakeHappy
-                    ;
+                    OnEnemyHappy?.Invoke();
                 break;
+
             case EEnemy.Friendly:
                 break;
+
             case EEnemy.Hungry:
-                //if (collectable is Food)
-                    //MakeHappy
-                    ;
+                if (collectable is Food)
+                    OnEnemyHappy?.Invoke();
                 break;
         }
     }

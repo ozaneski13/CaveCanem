@@ -14,9 +14,13 @@ public class CollectableListener : MonoBehaviour
     private int _healthCount = 0;
     public int HealthCount => _healthCount;
 
+    private int _foodCount = 0;
+    public int FoodCount => _foodCount;
+
     public Action OnCoinCollected;
     public Action OnHealthCollected;
     public Action OnBoneCollected;
+    public Action OnFoodCollected;
 
     private void Awake()
     {
@@ -53,6 +57,12 @@ public class CollectableListener : MonoBehaviour
         {
             _healthCount++;
             OnHealthCollected?.Invoke();
+        }
+
+        else if (collectable is Food)
+        {
+            _foodCount++;
+            OnFoodCollected?.Invoke();
         }
     }
 }

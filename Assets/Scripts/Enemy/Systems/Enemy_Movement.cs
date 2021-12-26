@@ -25,6 +25,8 @@ public class Enemy_Movement : MonoBehaviour
     private bool _isChasing = false;
     private bool _canMove = true;
 
+    private bool _isHappy = false;
+
     public Action OnAttack;
 
     private void Awake()
@@ -35,6 +37,8 @@ public class Enemy_Movement : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "TutorialLevel")
             _canMove = false;
+
+        RegisterToEvents();
     }
 
     private void Start()
@@ -46,7 +50,7 @@ public class Enemy_Movement : MonoBehaviour
 
     private void Update()
     {
-        if (_canMove)
+        if (_canMove && !_isHappy)
         {
             _distance = Vector3.Distance(_player.position, transform.position);
 
@@ -67,6 +71,19 @@ public class Enemy_Movement : MonoBehaviour
     private void OnDestroy()
     {
         StopAllCoroutines();
+
+        UnregisterFromEvents();
+    }
+
+    private void RegisterToEvents()
+    {
+        _enemy.OnEnemyHappy += MakeHappy;
+    }
+
+    private void UnregisterFromEvents()
+    {
+        if (_enemy != null)
+            _enemy.OnEnemyHappy -= MakeHappy;
     }
 
     private void FaceTarget()
@@ -111,4 +128,6 @@ public class Enemy_Movement : MonoBehaviour
     }
 
     public void CanMove() => _canMove = true;
+
+    private void MakeHappy() => _isHappy = true;
 }

@@ -8,10 +8,12 @@ public class UICountsUpdater : MonoBehaviour
     [SerializeField] private Text _healthCount = null;
     [SerializeField] private Text _coinCount = null;
     [SerializeField] private Text _boneCount = null;
+    [SerializeField] private Text _foodCount = null;
 
     private int _currentHealthCount = 0;
     private int _currentCoinCount = 0;
     private int _currentBoneCount = 0;
+    private int _currentFoodCount = 0;
 
     private Player _player = null;
 
@@ -43,6 +45,7 @@ public class UICountsUpdater : MonoBehaviour
         _collectableListener.OnCoinCollected += IncreaseCoinCount;
         _collectableListener.OnBoneCollected += IncreaseBoneCount;
         _collectableListener.OnHealthCollected += IncreaseHealthCount;
+        _collectableListener.OnFoodCollected += IncreaseFoodCount;
     }
 
     private void UnregisterFromEvents()
@@ -50,6 +53,7 @@ public class UICountsUpdater : MonoBehaviour
         _collectableListener.OnCoinCollected -= IncreaseCoinCount;
         _collectableListener.OnBoneCollected -= IncreaseBoneCount;
         _collectableListener.OnHealthCollected -= IncreaseHealthCount;
+        _collectableListener.OnFoodCollected -= IncreaseFoodCount;
 
         _player.OnHealthCountDecreased -= DecreaseHealthCount;
     }
@@ -69,7 +73,13 @@ public class UICountsUpdater : MonoBehaviour
     private void IncreaseBoneCount()
     {
         _currentBoneCount++;
-        //_boneCount.text = _currentBoneCount.ToString();
+        _boneCount.text = _currentBoneCount.ToString();
+    }
+
+    private void IncreaseFoodCount()
+    {
+        _currentFoodCount++;
+        _foodCount.text = _currentFoodCount.ToString();
     }
 
     private void DecreaseCoinCount()
@@ -98,7 +108,7 @@ public class UICountsUpdater : MonoBehaviour
         else
         {
             _currentBoneCount--;
-            //_boneCount.text = _currentBoneCount.ToString();
+            _boneCount.text = _currentBoneCount.ToString();
         }
     }
 

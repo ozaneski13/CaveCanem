@@ -16,6 +16,8 @@ public class Enemy_Attack : MonoBehaviour
 
     private bool _isAttacking = false;
 
+    private bool _isHappy = false;
+
     private void Awake()
     {
         _damage = _enemy.Damage;
@@ -33,17 +35,19 @@ public class Enemy_Attack : MonoBehaviour
 
     private void RegisterToEvents()
     {
+        _enemy.OnEnemyHappy += MakeHappy;
         _enemyMovement.OnAttack += Attack;
     }
 
     private void UnregisterFromEvents()
     {
+        _enemy.OnEnemyHappy -= MakeHappy;
         _enemyMovement.OnAttack -= Attack;
     }
 
     private void Attack()
     {
-        if (_isAttacking)
+        if (_isAttacking || _isHappy)
             return;
 
         _attackRoutine = AttackRoutine();
@@ -61,4 +65,6 @@ public class Enemy_Attack : MonoBehaviour
 
         _isAttacking = false;
     }
+
+    private void MakeHappy() => _isHappy = true;
 }

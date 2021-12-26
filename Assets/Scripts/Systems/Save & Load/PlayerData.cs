@@ -8,6 +8,7 @@ public class PlayerData
     public int _coin;
     public int _maximumHealth;
     public int _boneCount;
+    public int _foodCount;
 
     public PlayerData(Player player)
     {
@@ -16,5 +17,6 @@ public class PlayerData
         _coin = player.Coin;
         _maximumHealth = player.MaximumHealth;
         _boneCount = player.BoneCount;
+        _foodCount = player.FoodCount;
     }
 }
