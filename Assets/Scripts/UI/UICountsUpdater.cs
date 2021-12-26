@@ -28,11 +28,17 @@ public class UICountsUpdater : MonoBehaviour
 
         _currentHealthCount = Player.Instance.HealthCount;
         _currentCoinCount = Player.Instance.Coin;
+        _currentBoneCount = Player.Instance.BoneCount;
+        _currentFoodCount = Player.Instance.FoodCount;
 
         _healthCount.text = _currentHealthCount.ToString();
         _coinCount.text = _currentCoinCount.ToString();
+        _boneCount.text = _currentBoneCount.ToString();
+        _foodCount.text = _currentFoodCount.ToString();
 
         _player.OnHealthCountDecreased += DecreaseHealthCount;
+        _player.PlayerFeed.OnBoneUsed += DecreaseBoneCount;
+        _player.PlayerFeed.OnFoodUsed += DecreaseFoodCount;
     }
 
     private void OnDestroy()
@@ -56,6 +62,8 @@ public class UICountsUpdater : MonoBehaviour
         _collectableListener.OnFoodCollected -= IncreaseFoodCount;
 
         _player.OnHealthCountDecreased -= DecreaseHealthCount;
+        _player.PlayerFeed.OnBoneUsed -= DecreaseBoneCount;
+        _player.PlayerFeed.OnFoodUsed -= DecreaseFoodCount;
     }
 
     private void IncreaseHealthCount()
@@ -109,6 +117,21 @@ public class UICountsUpdater : MonoBehaviour
         {
             _currentBoneCount--;
             _boneCount.text = _currentBoneCount.ToString();
+        }
+    }
+
+    private void DecreaseFoodCount()
+    {
+        if (_currentFoodCount - 1 < 0)
+        {
+            _currentFoodCount = 0;
+            //todo market place.
+        }
+
+        else
+        {
+            _currentFoodCount--;
+            _foodCount.text = _currentFoodCount.ToString();
         }
     }
 

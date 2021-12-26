@@ -7,6 +7,7 @@ public class DummySaveFile : MonoBehaviour
     [SerializeField] private int _currentLevel = 1;
     [SerializeField] private int _healthCount = 0;
     [SerializeField] private int _boneCount = 0;
+    [SerializeField] private int _foodCount = 0;
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class DummySaveFile : MonoBehaviour
         player.MaximumHealth = _maximumHealth;
         player.HealthCount = _healthCount;
         player.BoneCount = _boneCount;
+        player.FoodCount = _foodCount;
 
         SaveSystem.SavePlayer(player);
     }

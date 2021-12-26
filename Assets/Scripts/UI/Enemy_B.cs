@@ -16,5 +16,28 @@ public class Enemy_B : Bilboard
         _enemyIndicatorText.text = _enemy.EnemyType.ToString();
 
         _enemyIndicatorText.SetAllDirty();
+
+        RegisterToEvents();
+    }
+
+    private void OnDestroy()
+    {
+        UnregisterFromEvents();
+    }
+
+    private void RegisterToEvents()
+    {
+        _enemy.OnEnemyHappy += MakeFriendly;
+    }
+
+    private void UnregisterFromEvents()
+    {
+        _enemy.OnEnemyHappy -= MakeFriendly;
+    }
+
+    private void MakeFriendly()
+    {
+        _enemyIndicatorText.color = _colors[(int)EEnemy.Friendly];
+        _enemyIndicatorText.text = EEnemy.Friendly.ToString();
     }
 }

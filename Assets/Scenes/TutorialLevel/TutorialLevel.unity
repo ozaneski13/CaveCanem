@@ -28721,10 +28721,13 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: You can feed the dogs around map with T key.
+  m_Text: 'If you have any bones you can feed the dogs with B key.
+
+    If you have
+    any food you can feed the dos with N key.'
 --- !u!222 &715399238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -78616,6 +78619,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4680742449397722368, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4680742449397722368, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
+      propertyPath: _boneCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4680742449397722368, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
+      propertyPath: _foodCount
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5520266175029852321, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
       propertyPath: m_RootOrder
       value: 2

@@ -9,6 +9,13 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Animator _animator = null;
 
+    [SerializeField] private Player_Feed _playerFeed = null;
+    public Player_Feed PlayerFeed
+    {
+        get { return _playerFeed; }
+        set { _playerFeed = value; }
+    }
+
     public static Player Instance;
 
     public Action<int> OnDamage;
