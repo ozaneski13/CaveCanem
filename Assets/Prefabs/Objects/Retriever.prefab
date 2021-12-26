@@ -348,9 +348,9 @@ GameObject:
   - component: {fileID: 8684404220873464852}
   - component: {fileID: 7682601410027756515}
   - component: {fileID: 5700361549956981343}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Retriever
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -385,7 +385,7 @@ NavMeshAgent:
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0.6
+  m_StoppingDistance: 0.63
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
