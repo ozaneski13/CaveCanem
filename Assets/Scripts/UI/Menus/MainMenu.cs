@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//Integrate option menu volume slider.
-
 public class MainMenu : MonoBehaviour
 {
     public void PlayGame()

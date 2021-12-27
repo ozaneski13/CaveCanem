@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class UICountsUpdater : MonoBehaviour
 {
     [SerializeField] private CollectableListener _collectableListener = null;
+    [SerializeField] private Market _market = null;
 
     [SerializeField] private Text _healthCount = null;
     [SerializeField] private Text _coinCount = null;
@@ -52,6 +53,10 @@ public class UICountsUpdater : MonoBehaviour
         _collectableListener.OnBoneCollected += IncreaseBoneCount;
         _collectableListener.OnHealthCollected += IncreaseHealthCount;
         _collectableListener.OnFoodCollected += IncreaseFoodCount;
+
+        _market.OnFoodBought += FoodBought;
+        _market.OnBoneBought += BoneBought;
+        _market.OnHealthBought += HealthBought;
     }
 
     private void UnregisterFromEvents()
@@ -64,6 +69,27 @@ public class UICountsUpdater : MonoBehaviour
         _player.OnHealthCountDecreased -= DecreaseHealthCount;
         _player.PlayerFeed.OnBoneUsed -= DecreaseBoneCount;
         _player.PlayerFeed.OnFoodUsed -= DecreaseFoodCount;
+    }
+
+    private void FoodBought(int price)
+    {
+        IncreaseFoodCount();
+
+        DecreaseCoinCount(price);
+    }
+
+    private void BoneBought(int price)
+    {
+        IncreaseBoneCount();
+
+        DecreaseCoinCount(price);
+    }
+
+    private void HealthBought(int price)
+    {
+        IncreaseHealthCount();
+
+        DecreaseCoinCount(price);
     }
 
     private void IncreaseHealthCount()
@@ -90,17 +116,14 @@ public class UICountsUpdater : MonoBehaviour
         _foodCount.text = _currentFoodCount.ToString();
     }
 
-    private void DecreaseCoinCount()
+    private void DecreaseCoinCount(int price)
     {
-        if (_currentCoinCount - 1 < 0)
-        {
+        if (_currentCoinCount - price < 0)
             _currentCoinCount = 0;
-            //todo market place.
-        }
 
         else
         {
-            _currentCoinCount--;
+            _currentCoinCount -= price;
             _coinCount.text = _currentCoinCount.ToString();
         }
     }
@@ -108,10 +131,7 @@ public class UICountsUpdater : MonoBehaviour
     private void DecreaseBoneCount()
     {
         if (_currentBoneCount - 1 < 0)
-        {
             _currentBoneCount = 0;
-            //todo market place.
-        }
 
         else
         {
@@ -123,10 +143,7 @@ public class UICountsUpdater : MonoBehaviour
     private void DecreaseFoodCount()
     {
         if (_currentFoodCount - 1 < 0)
-        {
             _currentFoodCount = 0;
-            //todo market place.
-        }
 
         else
         {
@@ -138,10 +155,7 @@ public class UICountsUpdater : MonoBehaviour
     private void DecreaseHealthCount()
     {
         if (_currentHealthCount - 1 < 0)
-        {
             _currentHealthCount = 0;
-            //todo end the game.
-        }
 
         else
         {

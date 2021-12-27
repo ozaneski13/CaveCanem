@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5520266175029852321}
   - component: {fileID: 5520266175029852322}
   - component: {fileID: 4680742449397722368}
+  - component: {fileID: 1111722527384953149}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -60,4 +61,17 @@ MonoBehaviour:
   _maximumHealth: 100
   _currentLevel: 1
   _healthCount: 0
-  _boneCount: 0
+  _boneCount: 3
+  _foodCount: 3
+--- !u!114 &1111722527384953149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5520266175029852332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f936514a556644aa192a3bea45bd48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
