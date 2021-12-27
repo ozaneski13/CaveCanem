@@ -115,7 +115,7 @@ public class TutorialManager : MonoBehaviour
                 _popUps[_popUpIndex - 1].SetActive(false);
                 _popUps[_popUpIndex].SetActive(true);
 
-                if (Input.GetKeyDown(KeyCode.T))
+                if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.N))
                     _popUpIndex++;
             }
 
