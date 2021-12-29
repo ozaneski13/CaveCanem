@@ -1,12 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using System;
 
 public class Enemy_Attack : MonoBehaviour
 {
-    //[SerializeField] private Animator _animator = null;
+    [SerializeField] private Animator _animator = null;
 
     [SerializeField] private Enemy _enemy = null;
     [SerializeField] private Enemy_Movement _enemyMovement = null;
+
+    public Action OnAnimCompleted;
 
     private IEnumerator _attackRoutine = null;
 
@@ -58,11 +61,12 @@ public class Enemy_Attack : MonoBehaviour
     {
         _isAttacking = true;
 
-        //_animator.SetBool("Attack", true);
+        _animator.SetBool("Attack", true);
         Player.Instance.TakeDamage(_damage);
 
         yield return new WaitForSeconds(_durationBetweenAttacks);
 
+        _animator.SetBool("Attack", false);
         _isAttacking = false;
     }
 
