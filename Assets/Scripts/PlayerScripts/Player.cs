@@ -1,8 +1,6 @@
 using System;
 using UnityEngine;
 
-//Add other things like first aid count, dog food and so on.
-
 public class Player : MonoBehaviour
 {
     [SerializeField] private CollectableListener _collectableListener = null;

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -54,6 +55,13 @@ public class PlayerDeathMenu : MonoBehaviour
 
     private void OnPlayerKill()
     {
+        StartCoroutine("rutin");
+    }
+
+    private IEnumerator rutin()
+    {
+        yield return new WaitForSeconds(4f);
+
         Time.timeScale = 0f;
 
         _playerDeathMenuImage.enabled = true;
