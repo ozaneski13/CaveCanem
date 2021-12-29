@@ -10,6 +10,8 @@ public class Enemy_Movement : MonoBehaviour
 
     [SerializeField] private Enemy _enemy = null;
 
+    [SerializeField] private Animator _animator = null;
+
     private Transform _player = null;
 
     private Vector3 _startingPosition = Vector3.zero;
@@ -64,6 +66,24 @@ public class Enemy_Movement : MonoBehaviour
 
                 else if (_isChasing)
                     _passedTime = 0f;
+
+                if (_navMeshAgent.velocity.magnitude > 0.01 && _navMeshAgent.velocity.magnitude < 3f)
+                {
+                    _animator.SetBool("Walk", true);
+                    _animator.SetBool("Run", false);
+                }
+
+                else if (_navMeshAgent.velocity.magnitude > 3f) 
+                {
+                    _animator.SetBool("Walk", false);
+                    _animator.SetBool("Run", true);
+                }
+
+                else
+                {
+                    _animator.SetBool("Idle", true);
+                    _animator.SetBool("Walk", false);
+                }
             }
         }
     }
