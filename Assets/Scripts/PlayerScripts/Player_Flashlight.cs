@@ -14,6 +14,8 @@ public class Player_Flashlight : MonoBehaviour
     private IEnumerator _flashlightAnimRoutine = null;
     private IEnumerator _flashlightLowBatteryAnim = null;
 
+    private Player _player = null;
+
     private bool _isFlashlightOn = false;
     private bool _isEnoughBattery = true;
     private bool _canUse = true;
@@ -24,6 +26,13 @@ public class Player_Flashlight : MonoBehaviour
             _canUse = false;
     }
 
+    private void Start()
+    {
+        _player = Player.Instance;
+
+        RegisterToEvents();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F) && _canUse)
@@ -32,7 +41,20 @@ public class Player_Flashlight : MonoBehaviour
 
     private void OnDestroy()
     {
+        UnregisterFromEvents();
+
         StopAllCoroutines();
+    }
+
+    private void RegisterToEvents()
+    {
+        _player.OnDeath += OnDeath;
+    }
+
+    private void UnregisterFromEvents()
+    {
+        if (_player != null)
+            _player.OnDeath -= OnDeath;
     }
 
     private void ToggleFlashlight()
@@ -108,4 +130,6 @@ public class Player_Flashlight : MonoBehaviour
     }
 
     public bool CanUse() => _canUse = true;
+
+    private void OnDeath() => _canUse = false;
 }

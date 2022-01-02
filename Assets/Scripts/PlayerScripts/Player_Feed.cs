@@ -22,6 +22,8 @@ public class Player_Feed : MonoBehaviour
     public Action OnBoneUsed;
     public Action OnFoodUsed;
 
+    private bool _isPlayerDied = false;
+
     private void Awake()
     {
         _bones = new List<Bone>();
@@ -31,10 +33,15 @@ public class Player_Feed : MonoBehaviour
     private void Start()
     {
         _player = Player.Instance;
+
+        RegisterToEvents();
     }
 
     private void Update()
     {
+        if (_isPlayerDied)
+            return;
+
         Collectable feed = null;
 
         if (Input.GetKeyDown(KeyCode.B))
@@ -62,6 +69,22 @@ public class Player_Feed : MonoBehaviour
             Feed(closestEnemy, feed);
         else
             Destroy(feed.gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        UnregisterFromEvents();
+    }
+
+    private void RegisterToEvents()
+    {
+        _player.OnDeath += OnDeath;
+    }
+
+    private void UnregisterFromEvents()
+    {
+        if (_player != null)
+            _player.OnDeath -= OnDeath;
     }
 
     private void Feed(GameObject closestEnemy, Collectable feed)
@@ -118,4 +141,6 @@ public class Player_Feed : MonoBehaviour
 
         enemy.GetFeeded(feed);
     }
+
+    private void OnDeath() => _isPlayerDied = true;
 }

@@ -43579,10 +43579,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1907059832}
     m_Modifications:
-    - target: {fileID: 5694425992476251845, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
-      propertyPath: _damage
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 6837122737971523072, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 15.2105465
@@ -44158,6 +44154,12 @@ PrefabInstance:
     - target: {fileID: 6837122737971523182, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.000013741601
+      objectReference: {fileID: 0}
+    - target: {fileID: 7992869539170439574, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
+      propertyPath: m_Text
+      value: '
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 8218437732914814497, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
       propertyPath: _enemyAttack

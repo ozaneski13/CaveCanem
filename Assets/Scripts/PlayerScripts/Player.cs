@@ -4,8 +4,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private CollectableListener _collectableListener = null;
+
     [SerializeField] private Player_Feed _playerFeed = null;
+
     [SerializeField] private Animator _animator = null;
+
     [SerializeField] private ParticleSystem _particleSystem = null;
 
     public Player_Feed PlayerFeed
@@ -19,7 +22,7 @@ public class Player : MonoBehaviour
     public Action<int> OnDamage;
     public Action<int> OnHeal;
 
-    public Action OnKill;
+    public Action OnDeath;
     public Action OnHealthCountDecreased;
 
     private bool _isDead = false;
@@ -140,7 +143,7 @@ public class Player : MonoBehaviour
 
                 _isDead = true;
 
-                OnKill?.Invoke();
+                OnDeath?.Invoke();
             }
         }
 

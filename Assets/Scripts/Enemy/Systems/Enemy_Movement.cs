@@ -12,7 +12,7 @@ public class Enemy_Movement : MonoBehaviour
 
     [SerializeField] private Animator _animator = null;
 
-    private Transform _player = null;
+    private Player _player = null;
 
     private Vector3 _startingPosition = Vector3.zero;
 
@@ -28,6 +28,8 @@ public class Enemy_Movement : MonoBehaviour
     private bool _canMove = true;
 
     private bool _isHappy = false;
+
+    private bool _isPlayerDead = false;
 
     public Action OnAttack;
 
@@ -45,16 +47,18 @@ public class Enemy_Movement : MonoBehaviour
 
     private void Start()
     {
-        _player = Player.Instance.transform;
+        _player = Player.Instance;
 
         _startingPosition = transform.position;
+
+        RegisterToLateEvents();
     }
 
     private void Update()
     {
-        if (_canMove && !_isHappy)
+        if (_canMove && !_isHappy && !_isPlayerDead)
         {
-            _distance = Vector3.Distance(_player.position, transform.position);
+            _distance = Vector3.Distance(_player.transform.position, transform.position);
 
             if (_distance <= _lookRadius)
             {
@@ -93,6 +97,8 @@ public class Enemy_Movement : MonoBehaviour
         StopAllCoroutines();
 
         UnregisterFromEvents();
+
+        UnregisterFromLateEvents();
     }
 
     private void RegisterToEvents()
@@ -106,9 +112,20 @@ public class Enemy_Movement : MonoBehaviour
             _enemy.OnEnemyHappy -= MakeHappy;
     }
 
+    private void RegisterToLateEvents()
+    {
+        _player.OnDeath += OnPlayerDeath;
+    }
+
+    private void UnregisterFromLateEvents()
+    {
+        if (_player != null)
+            _player.OnDeath -= OnPlayerDeath;
+    }
+
     private void FaceTarget()
     {
-        Vector3 direction = (_player.position - transform.position).normalized;
+        Vector3 direction = (_player.transform.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
 
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * _rotationVariable);
@@ -131,7 +148,7 @@ public class Enemy_Movement : MonoBehaviour
             }
 
             else
-                _navMeshAgent.SetDestination(_player.position);
+                _navMeshAgent.SetDestination(_player.transform.position);
 
             yield return null;
         }
@@ -150,4 +167,15 @@ public class Enemy_Movement : MonoBehaviour
     public void CanMove() => _canMove = true;
 
     private void MakeHappy() => _isHappy = true;
+
+    private void OnPlayerDeath()
+    {
+        _isPlayerDead = true;
+
+        StopCoroutine(_chaseRoutine);
+
+        _navMeshAgent.SetDestination(_startingPosition);
+
+        _isChasing = false;
+    }
 }

@@ -21,13 +21,13 @@ public class PlayerDeathMenu : MonoBehaviour
 
     private void RegisterToEvents()
     {
-        Player.Instance.OnKill += OnPlayerKill;
+        Player.Instance.OnDeath += OnPlayerKill;
     }
 
     private void UnregisterFromEvents()
     {
         if (Player.Instance != null)
-            Player.Instance.OnKill -= OnPlayerKill;
+            Player.Instance.OnDeath -= OnPlayerKill;
     }
 
     public void LoadLevelAgain()

@@ -18,6 +18,8 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private float _jumpForce = 2f;
     [SerializeField] private float _rotationSpeed = 100f;
 
+    private Player _player = null;
+
     private Vector3 _velocity = Vector3.zero;
     private Vector3 _direction = Vector3.zero;
 
@@ -37,10 +39,33 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        _player = Player.Instance;
+
+        RegisterToEvents();
+    }
+
     private void Update()
     {
         if (_canWalk)
             Movement();
+    }
+
+    private void OnDestroy()
+    {
+        UnregisterFromEvents();
+    }
+
+    private void RegisterToEvents()
+    {
+        _player.OnDeath += PlayerDied;
+    }
+
+    private void UnregisterFromEvents()
+    {
+        if (_player != null)
+            _player.OnDeath -= PlayerDied;
     }
 
     private void Movement()
@@ -76,12 +101,12 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl) && _canSlow)
         {
             _animator.SetBool("Idle", false);
-            _animator.SetBool("Walk", true);//Slow walk anim
+            _animator.SetBool("Walk", true);
             defaultSpeed = _lowSpeed;
         }
 
-        float xPos = Input.GetAxis("Horizontal");//Yatay
-        float zPos = Input.GetAxis("Vertical");//Dikey
+        float xPos = Input.GetAxis("Horizontal");
+        float zPos = Input.GetAxis("Vertical");
 
         CheckDirection(xPos, zPos);
         
@@ -138,5 +163,13 @@ public class Player_Movement : MonoBehaviour
             _canSprint = true;
         else if (popUpIndex == 4)
             _canSlow = true;
+    }
+
+    private void PlayerDied()
+    {
+        _canWalk = false;
+        _canJump = false;
+        _canSlow = false;
+        _canSprint = false;
     }
 }
