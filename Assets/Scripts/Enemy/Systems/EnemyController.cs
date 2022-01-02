@@ -1,13 +1,18 @@
 using UnityEngine;
+using System;
 
 public class EnemyController : MonoBehaviour
 {
     private Player _player = null;
     private GameObject[] _enemies = null;
 
+    public Action<string, EEnemy> OnWrongFeed;
+
     private void Awake()
     {
         GatherEnemies();
+
+        RegisterToEvents();
     }
 
     private void Start()
@@ -15,9 +20,26 @@ public class EnemyController : MonoBehaviour
         _player = Player.Instance;
     }
 
+    private void OnDestroy()
+    {
+        UnregisterFromEvents();
+    }
+
     private void GatherEnemies()
     {
         _enemies = GameObject.FindGameObjectsWithTag("Enemy");
+    }
+
+    private void RegisterToEvents()
+    {
+        for (int i = 0; i < _enemies.Length; i++)
+            _enemies[i].GetComponent<Enemy>().OnWrongFeed += OnWrongFeedGiven;
+    }
+
+    private void UnregisterFromEvents()
+    {
+        for (int i = 0; i < _enemies.Length; i++)
+            _enemies[i].GetComponent<Enemy>().OnWrongFeed -= OnWrongFeedGiven;
     }
 
     public GameObject GetClosest()
@@ -39,4 +61,6 @@ public class EnemyController : MonoBehaviour
 
         return closestEnemy;
     }
+
+    private void OnWrongFeedGiven(string collectable, EEnemy enemyType) => OnWrongFeed?.Invoke(collectable, enemyType);
 }

@@ -22,6 +22,7 @@ public abstract class Enemy : MonoBehaviour, IEnemy
     public float InterestTime => _interestTime;
 
     public Action OnEnemyHappy;
+    public Action<string, EEnemy> OnWrongFeed;
 
     public void GetFeeded(Collectable collectable)
     {
@@ -29,7 +30,12 @@ public abstract class Enemy : MonoBehaviour, IEnemy
         {
             case EEnemy.Aggressive:
                 if (collectable is Bone)
+                {
+                    _enemyType = EEnemy.Friendly;
                     OnEnemyHappy?.Invoke();
+                }
+                else
+                    OnWrongFeed?.Invoke("Bone", _enemyType);
                 break;
 
             case EEnemy.Friendly:
@@ -37,7 +43,12 @@ public abstract class Enemy : MonoBehaviour, IEnemy
 
             case EEnemy.Hungry:
                 if (collectable is Food)
+                {
+                    _enemyType = EEnemy.Friendly;
                     OnEnemyHappy?.Invoke();
+                }
+                else
+                    OnWrongFeed?.Invoke("Food", _enemyType);
                 break;
         }
     }

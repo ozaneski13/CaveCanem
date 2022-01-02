@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 0}
-  _enemy: {fileID: 0}
+  _enemy: {fileID: 5694425992476251845}
   _enemyIndicatorText: {fileID: 7992869539170439574}
   _colors:
   - {r: 1, g: 0, b: 0, a: 1}

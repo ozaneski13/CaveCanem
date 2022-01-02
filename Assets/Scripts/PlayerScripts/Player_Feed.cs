@@ -16,8 +16,9 @@ public class Player_Feed : MonoBehaviour
     private List<Bone> _bones = null;
     private List<Food> _foods = null;
 
-    public Action OnInsufficientBone;
-    public Action OnInsufficientFood;
+    public Action OnUnnecessaryFoodUsed;
+
+    public Action<string> OnInsufficientFeed;
 
     public Action OnBoneUsed;
     public Action OnFoodUsed;
@@ -42,16 +43,33 @@ public class Player_Feed : MonoBehaviour
         if (_isPlayerDied)
             return;
 
+        GameObject closestEnemy = _enemyController.GetClosest();
+        Enemy enemy = closestEnemy.GetComponent<Enemy>();
+
         Collectable feed = null;
 
         if (Input.GetKeyDown(KeyCode.B))
         {
+            if (enemy.EnemyType == EEnemy.Friendly)
+            {
+                OnUnnecessaryFoodUsed?.Invoke();
+
+                return;
+            }
+
             feed = Instantiate(_bone, _parentObject).GetComponent<Collectable>();
             _bones.Add((Bone)feed);
         }
 
         else if (Input.GetKeyDown(KeyCode.N))
         {
+            if (enemy.EnemyType == EEnemy.Friendly)
+            {
+                OnUnnecessaryFoodUsed?.Invoke();
+
+                return;
+            }
+
             feed = Instantiate(_food, _parentObject).GetComponent<Collectable>();
             _foods.Add((Food)feed);
         }
@@ -60,8 +78,6 @@ public class Player_Feed : MonoBehaviour
             return;
 
         feed.gameObject.SetActive(false);
-
-        GameObject closestEnemy = _enemyController.GetClosest();
         
         float distance = Vector3.Distance(closestEnemy.transform.position, transform.position);
 
@@ -103,16 +119,15 @@ public class Player_Feed : MonoBehaviour
             feedCount = _player.FoodCount;
 
         else
-
-            return;//You don't have any bones UI.
+            return;
 
         if (feedCount == 0)
         {
             if (isFood)
-                OnInsufficientFood?.Invoke();
+                OnInsufficientFeed?.Invoke("Food");
 
             else
-                OnInsufficientBone?.Invoke();
+                OnInsufficientFeed?.Invoke("Bone");
 
             Destroy(feed.gameObject);
 
@@ -122,7 +137,7 @@ public class Player_Feed : MonoBehaviour
         if (isFood)
         {
             _player.FoodCount--;
-            OnBoneUsed?.Invoke();
+            OnFoodUsed?.Invoke();
 
             Food trashFood = _foods[_foods.Count - 1];
             _foods.RemoveAt(_foods.Count - 1);
@@ -132,7 +147,7 @@ public class Player_Feed : MonoBehaviour
         else
         {
             _player.BoneCount--;
-            OnFoodUsed?.Invoke();
+            OnBoneUsed?.Invoke();
 
             Bone trashBone = _bones[_bones.Count - 1];
             _bones.RemoveAt(_bones.Count - 1);
