@@ -4,10 +4,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private CollectableListener _collectableListener = null;
-
-    [SerializeField] private Animator _animator = null;
-
     [SerializeField] private Player_Feed _playerFeed = null;
+    [SerializeField] private Animator _animator = null;
+    [SerializeField] private ParticleSystem _particleSystem = null;
+
     public Player_Feed PlayerFeed
     {
         get { return _playerFeed; }
@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
 
     public Action OnKill;
     public Action OnHealthCountDecreased;
+
+    private bool _isDead = false;
 
     private int _coin;
     public int Coin
@@ -112,6 +114,11 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (_isDead)
+            return;
+
+        _particleSystem.Play();
+
         if (_currentMaximumHealth > damage)
             _currentMaximumHealth -= damage;
         else
@@ -130,6 +137,8 @@ public class Player : MonoBehaviour
                 _currentMaximumHealth = 0;
 
                 _animator.SetBool("Die", true);
+
+                _isDead = true;
 
                 OnKill?.Invoke();
             }
