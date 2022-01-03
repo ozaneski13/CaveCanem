@@ -2,5 +2,6 @@ public enum EEnemy
 {
     Aggressive,
     Hungry,
-    Friendly
+    Friendly,
+    Rabid,
 }

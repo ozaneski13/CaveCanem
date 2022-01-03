@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -11,6 +12,10 @@ public class Player : MonoBehaviour
 
     [SerializeField] private ParticleSystem _particleSystem = null;
 
+    [SerializeField] private float _poisonTimer = 4f;
+
+    [SerializeField] private float _poisonThickSpeed = 1f;
+
     public Player_Feed PlayerFeed
     {
         get { return _playerFeed; }
@@ -19,13 +24,19 @@ public class Player : MonoBehaviour
 
     public static Player Instance;
 
-    public Action<int> OnDamage;
+    public Action<int, bool> OnDamage;
     public Action<int> OnHeal;
 
     public Action OnDeath;
+    public Action OnCured;
     public Action OnHealthCountDecreased;
 
+    private IEnumerator _poisonRoutine = null;
+
     private bool _isDead = false;
+    private bool _isPoisoned = false;
+
+    private float _timer = 0f;
 
     private int _coin;
     public int Coin
@@ -89,6 +100,9 @@ public class Player : MonoBehaviour
     private void OnDestroy()
     {
         UnregisterFromEvents();
+
+        if (_poisonRoutine != null)
+            StopCoroutine(_poisonRoutine);
     }
 
     private void RegisterToEvents()
@@ -115,7 +129,7 @@ public class Player : MonoBehaviour
         _currentMaximumHealth = _maximumHealth;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, bool isPoisoned)
     {
         if (_isDead)
             return;
@@ -123,7 +137,17 @@ public class Player : MonoBehaviour
         _particleSystem.Play();
 
         if (_currentMaximumHealth > damage)
+        {
+            if (isPoisoned)
+            {
+                GetPoisoned(damage);
+
+                return;
+            }
+
             _currentMaximumHealth -= damage;
+        }
+
         else
         {
             if (HealthCount > 0)
@@ -133,6 +157,13 @@ public class Player : MonoBehaviour
 
                 OnHealthCountDecreased?.Invoke();
                 OnHeal?.Invoke(_maximumHealth);
+
+                if (isPoisoned)
+                {
+                    GetPoisoned(damage);
+                    
+                    return;
+                }
             }
 
             else
@@ -147,21 +178,66 @@ public class Player : MonoBehaviour
             }
         }
 
-        OnDamage?.Invoke(damage);
+        OnDamage?.Invoke(damage, isPoisoned);
     }
 
-    private void GetCoin()
+    private void GetCoin() => Coin++;
+
+    private void GetHealth() => HealthCount++;
+
+    private void GetPoisoned(int damage)
     {
-        Coin++;
+        if (_isPoisoned)
+            return;
+
+        _poisonRoutine = PoisonRoutine(damage);
+        StartCoroutine(_poisonRoutine);
     }
 
-    private void GetHealth()
+    private IEnumerator PoisonRoutine(int damage)
     {
-        HealthCount++;
-    }
+        _timer = 0f;
+        _isPoisoned = true;
 
-    /*private void GetHeal(int heal)
-    {
-        OnHeal?.Invoke(heal);
-    }*/
+        while (_timer < _poisonTimer)
+        {
+            _timer += Time.deltaTime;
+
+            if (_currentMaximumHealth > damage)
+            {
+                _currentMaximumHealth -= damage;
+                OnDamage?.Invoke(damage, _isPoisoned);
+            }
+
+            else
+            {
+                if (HealthCount > 0)
+                {
+                    _currentMaximumHealth = _maximumHealth;
+                    _healthCount--;
+
+                    OnHealthCountDecreased?.Invoke();
+                    OnHeal?.Invoke(_maximumHealth);
+                }
+
+                else
+                {
+                    _currentMaximumHealth = 0;
+
+                    _animator.SetBool("Die", true);
+
+                    _isDead = true;
+
+                    OnDeath?.Invoke();
+                }
+            }
+
+            yield return new WaitForSeconds(_poisonThickSpeed);
+
+            _timer += _poisonThickSpeed;
+        }
+        
+        OnCured?.Invoke();
+        _isPoisoned = false;
+    }
 }

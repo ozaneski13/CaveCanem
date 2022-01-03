@@ -25,8 +25,13 @@ public class Enemy_Attack : MonoBehaviour
 
     private bool _canAttack = true;
 
+    private bool _isPoisoned = false;
+
     private void Awake()
     {
+        if (_enemy.EnemyType == EEnemy.Rabid)
+            _isPoisoned = true;
+
         _damage = _enemy.Damage;
         _durationBetweenAttacks = _enemy.DurationBetweenAttacks;
 
@@ -85,7 +90,7 @@ public class Enemy_Attack : MonoBehaviour
         _isAttacking = true;
 
         _animator.SetBool("Attack", true);
-        Player.Instance.TakeDamage(_damage);
+        _player.TakeDamage(_damage, _isPoisoned);
 
         yield return new WaitForSeconds(_durationBetweenAttacks);
 

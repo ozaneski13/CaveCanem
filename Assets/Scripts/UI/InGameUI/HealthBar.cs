@@ -8,6 +8,8 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Gradient _normalGradient = null;
     [SerializeField] private Gradient _poisonedGradient = null;
 
+    private Player _player = null;
+
     private float _maximumHealth = 100;
     private float _currentHealth = 100;
 
@@ -15,6 +17,8 @@ public class HealthBar : MonoBehaviour
 
     private void Start()
     {
+        _player = Player.Instance;
+
         RegisterToEvents();
 
         _maximumHealth = Player.Instance.MaximumHealth;
@@ -28,14 +32,16 @@ public class HealthBar : MonoBehaviour
 
     private void RegisterToEvents()
     {
-        Player.Instance.OnDamage += DecreaseHealth;
-        Player.Instance.OnHeal += IncreaseHealth;
+        _player.OnDamage += DecreaseHealth;
+        _player.OnHeal += IncreaseHealth;
+        _player.OnCured += Cured;
     }
 
     private void UnregisterFromEvents()
     {
-        Player.Instance.OnDamage -= DecreaseHealth;
-        Player.Instance.OnHeal -= IncreaseHealth;
+        _player.OnDamage -= DecreaseHealth;
+        _player.OnHeal -= IncreaseHealth;
+        _player.OnCured -= Cured;
     }
 
     private void IncreaseHealth(int health)
@@ -53,18 +59,27 @@ public class HealthBar : MonoBehaviour
         _slider.value = _currentHealth;
     }
 
-    private void DecreaseHealth(int hit)
+    private void DecreaseHealth(int hit, bool isPoisoned)
     {
+        _isPoisoned = isPoisoned;
+
         if (_currentHealth > hit)
             _currentHealth -= hit;
         else
             _currentHealth = 0;
 
-        if (_isPoisoned)
+        if (isPoisoned)
             _filler.color = _poisonedGradient.Evaluate(_currentHealth / _maximumHealth);
         else
             _filler.color = _normalGradient.Evaluate(_currentHealth / _maximumHealth);
 
         _slider.value = _currentHealth;
+    }
+
+    private void Cured()
+    {
+        _isPoisoned = false;
+
+        _filler.color = _normalGradient.Evaluate(_currentHealth / _maximumHealth);
     }
 }

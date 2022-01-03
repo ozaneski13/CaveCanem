@@ -23407,7 +23407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &563373460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23425,7 +23425,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &563373461
 MonoBehaviour:
@@ -23457,10 +23457,11 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: You can collect coins by moving on it.
+  m_Text: 'You can collect coins, bones and hearts by moving on it. You can use the
+    coins you collect in the market. '
 --- !u!222 &563373462
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31116,6 +31117,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1907059832}
     m_Modifications:
+    - target: {fileID: 5694425992476251845, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
+      propertyPath: _damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694425992476251845, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
+      propertyPath: _enemyType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6837122737971523072, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 15.2105465
@@ -44242,6 +44251,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1907059832}
     m_Modifications:
+    - target: {fileID: 5694425992476251845, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
+      propertyPath: _damage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6837122737971523072, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 15.2105465
@@ -44878,7 +44891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8218437732914814500, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9124571856053252129, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
       propertyPath: _camera
@@ -77243,7 +77256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1894144207
 RectTransform:
   m_ObjectHideFlags: 0
