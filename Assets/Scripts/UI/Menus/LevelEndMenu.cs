@@ -3,13 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelEndMenu : MonoBehaviour
 {
-    //[SerializeField] private GameObject _marketUI = null;
-
     [SerializeField] private CollectableListener _collectableListener = null;
 
     [SerializeField] private GameObject _tutorials = null;
 
     [SerializeField] private float _timeScale = 0.2f;
+
+    private Player _player = null;
 
     private void Awake()
     {
@@ -18,6 +18,11 @@ public class LevelEndMenu : MonoBehaviour
         Time.timeScale = _timeScale;
 
         UpdatePlayer();
+    }
+
+    private void Start()
+    {
+        _player = Player.Instance;
     }
 
     public void LoadNextLevel()
@@ -42,8 +47,8 @@ public class LevelEndMenu : MonoBehaviour
 
     private void UpdatePlayer()
     {
-        Player.Instance.Level++;
-        Player.Instance.Coin += _collectableListener.CoinCount;
+        _player.Level++;
+        _player.Coin += _collectableListener.CoinCount;
 
         SaveSystem.SavePlayer(Player.Instance);
     }

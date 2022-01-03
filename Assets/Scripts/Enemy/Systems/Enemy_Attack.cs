@@ -10,6 +10,7 @@ public class Enemy_Attack : MonoBehaviour
     [SerializeField] private Enemy_Movement _enemyMovement = null;
 
     private Player _player = null;
+    private SFXManager _sfxManager = null;
 
     public Action OnAnimCompleted;
 
@@ -20,17 +21,16 @@ public class Enemy_Attack : MonoBehaviour
     private float _durationBetweenAttacks;
 
     private bool _isAttacking = false;
-
     private bool _isHappy = false;
-
     private bool _canAttack = true;
-
     private bool _isPoisoned = false;
 
     private void Awake()
     {
         if (_enemy.EnemyType == EEnemy.Rabid)
             _isPoisoned = true;
+        else if (_enemy.EnemyType == EEnemy.Friendly)
+            _isHappy = true;
 
         _damage = _enemy.Damage;
         _durationBetweenAttacks = _enemy.DurationBetweenAttacks;
@@ -41,6 +41,7 @@ public class Enemy_Attack : MonoBehaviour
     private void Start()
     {
         _player = Player.Instance;
+        _sfxManager = SFXManager.Instance;
 
         RegisterToLateEvents();
     }
@@ -90,6 +91,12 @@ public class Enemy_Attack : MonoBehaviour
         _isAttacking = true;
 
         _animator.SetBool("Attack", true);
+
+        if (!_sfxManager.GetBark().isPlaying)
+        {
+            _sfxManager.GetBark().Play();
+        }
+
         _player.TakeDamage(_damage, _isPoisoned);
 
         yield return new WaitForSeconds(_durationBetweenAttacks);

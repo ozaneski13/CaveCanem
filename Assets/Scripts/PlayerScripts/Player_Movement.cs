@@ -19,6 +19,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private float _rotationSpeed = 100f;
 
     private Player _player = null;
+    private SFXManager _sfxManager = null;
 
     private Vector3 _velocity = Vector3.zero;
     private Vector3 _direction = Vector3.zero;
@@ -42,6 +43,7 @@ public class Player_Movement : MonoBehaviour
     private void Start()
     {
         _player = Player.Instance;
+        _sfxManager = SFXManager.Instance;
 
         RegisterToEvents();
     }
@@ -77,6 +79,7 @@ public class Player_Movement : MonoBehaviour
         }
 
         bool isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundLayerMask);
+        AudioSource source = _sfxManager.GetHumanWalk();
 
         if (isGrounded)
         {
@@ -96,6 +99,8 @@ public class Player_Movement : MonoBehaviour
             _animator.SetBool("Idle", false);
             _animator.SetBool("Run", true);
             defaultSpeed = _highSpeed;
+
+            source = _sfxManager.GetHumanRun();
         }
 
         if (Input.GetKey(KeyCode.LeftControl) && _canSlow)
@@ -103,6 +108,8 @@ public class Player_Movement : MonoBehaviour
             _animator.SetBool("Idle", false);
             _animator.SetBool("Walk", true);
             defaultSpeed = _lowSpeed;
+
+            source = _sfxManager.GetHumanWalk(); 
         }
 
         float xPos = Input.GetAxis("Horizontal");
@@ -114,6 +121,8 @@ public class Player_Movement : MonoBehaviour
 
         if (xPos != 0 || zPos != 0)
             _animator.SetBool("Idle", false);
+        if (xPos == 0 && zPos == 0)
+            source = null;
 
         Vector3 moveDirection = transform.right * xPos + transform.forward * zPos;
         _characterController.Move(moveDirection * defaultSpeed * Time.deltaTime);
@@ -128,6 +137,9 @@ public class Player_Movement : MonoBehaviour
 
         _velocity.y += gravity * Time.deltaTime;
         _characterController.Move(_velocity * Time.deltaTime);
+
+        if (source != null && !source.isPlaying)
+            source.Play();
     }
 
     private void CheckDirection(float xPos, float zPos)

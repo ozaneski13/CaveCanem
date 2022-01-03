@@ -16,14 +16,6 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float _poisonThickSpeed = 1f;
 
-    public Player_Feed PlayerFeed
-    {
-        get { return _playerFeed; }
-        set { _playerFeed = value; }
-    }
-
-    public static Player Instance;
-
     public Action<int, bool> OnDamage;
     public Action<int> OnHeal;
 
@@ -31,12 +23,22 @@ public class Player : MonoBehaviour
     public Action OnCured;
     public Action OnHealthCountDecreased;
 
+    private SFXManager _sfxManager = null;
+
     private IEnumerator _poisonRoutine = null;
 
     private bool _isDead = false;
     private bool _isPoisoned = false;
 
+    private int _currentMaximumHealth;
+
     private float _timer = 0f;
+
+    public Player_Feed PlayerFeed
+    {
+        get { return _playerFeed; }
+        set { _playerFeed = value; }
+    }
 
     private int _coin;
     public int Coin
@@ -59,8 +61,6 @@ public class Player : MonoBehaviour
         set { _maximumHealth = value; }
     }
 
-    private int _currentMaximumHealth;
-
     private int _level;
     public int Level
     {
@@ -82,6 +82,7 @@ public class Player : MonoBehaviour
         set { _foodCount = value; }
     }
 
+    public static Player Instance;
     #region Singleton
     private void Awake()
     {
@@ -94,6 +95,8 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        _sfxManager = SFXManager.Instance;
+
         RegisterToEvents();
     }
 
@@ -135,6 +138,11 @@ public class Player : MonoBehaviour
             return;
 
         _particleSystem.Play();
+
+        AudioSource scream = _sfxManager.GetHumanScream();
+
+        if (!scream.isPlaying)
+            scream.Play();
 
         if (_currentMaximumHealth > damage)
         {

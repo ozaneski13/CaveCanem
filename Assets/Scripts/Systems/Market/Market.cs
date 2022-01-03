@@ -18,6 +18,8 @@ public class Market : MonoBehaviour
     public Action<int> OnBoneBought;
     public Action<int> OnHealthBought;
 
+    public Action OnCollectablesUpdated;
+
     private Player _player = null;
 
     private int _coins;
@@ -84,7 +86,11 @@ public class Market : MonoBehaviour
 
         _player.Coin -= _foodPrice;
         _coins -= _foodPrice;
+
+        _player.FoodCount++;
+
         OnFoodBought?.Invoke(_foodPrice);
+        OnCollectablesUpdated?.Invoke();
     }
 
     public void BuyBone()
@@ -96,7 +102,11 @@ public class Market : MonoBehaviour
 
         _player.Coin -= _bonePrice;
         _coins -= _bonePrice;
+
+        _player.BoneCount++;
+
         OnBoneBought?.Invoke(_bonePrice);
+        OnCollectablesUpdated?.Invoke();
     }
 
     public void BuyHealth()
@@ -108,7 +118,11 @@ public class Market : MonoBehaviour
 
         _player.Coin -= _healthPrice;
         _coins -= _healthPrice;
+
+        _player.HealthCount++;
+
         OnHealthBought?.Invoke(_healthPrice);
+        OnCollectablesUpdated?.Invoke();
     }
 
     private void Passed() => _isPassed = true;

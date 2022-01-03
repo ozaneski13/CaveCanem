@@ -50,6 +50,15 @@ public abstract class Enemy : MonoBehaviour, IEnemy
                 else
                     OnWrongFeed?.Invoke("Food", _enemyType);
                 break;
+            case EEnemy.Rabid:
+                if (collectable is Food)
+                {
+                    _enemyType = EEnemy.Friendly;
+                    OnEnemyHappy?.Invoke();
+                }
+                else
+                    OnWrongFeed?.Invoke("Food", _enemyType);
+                break;
         }
     }
 }

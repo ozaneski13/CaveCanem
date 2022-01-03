@@ -21,7 +21,7 @@ public class HealthBar : MonoBehaviour
 
         RegisterToEvents();
 
-        _maximumHealth = Player.Instance.MaximumHealth;
+        _maximumHealth = _player.MaximumHealth;
         _currentHealth = _maximumHealth;
     }
 

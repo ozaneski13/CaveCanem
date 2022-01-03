@@ -14,6 +14,8 @@ public class Enemy_Movement : MonoBehaviour
 
     private Player _player = null;
 
+    private SFXManager _sfxManager = null;
+
     private Vector3 _startingPosition = Vector3.zero;
 
     private IEnumerator _chaseRoutine = null;
@@ -35,6 +37,9 @@ public class Enemy_Movement : MonoBehaviour
 
     private void Awake()
     {
+        if (_enemy.EnemyType == EEnemy.Friendly)
+            _isHappy = true;
+
         _lookRadius = _enemy.LookRadius;
         _rotationVariable = _enemy.RotationVariable;
         _interestTime = _enemy.InterestTime;
@@ -48,6 +53,7 @@ public class Enemy_Movement : MonoBehaviour
     private void Start()
     {
         _player = Player.Instance;
+        _sfxManager = SFXManager.Instance;
 
         _startingPosition = transform.position;
 
@@ -74,18 +80,30 @@ public class Enemy_Movement : MonoBehaviour
                 if (_navMeshAgent.velocity.magnitude > 0.01 && _navMeshAgent.velocity.magnitude < 3f)
                 {
                     _animator.SetBool("Walk", true);
+
+                    if (!_sfxManager.GetBreathing().isPlaying)
+                        _sfxManager.GetBreathing().Play();
+
                     _animator.SetBool("Run", false);
                 }
 
                 else if (_navMeshAgent.velocity.magnitude > 3f) 
                 {
                     _animator.SetBool("Walk", false);
+
+                    if (!_sfxManager.GetBreathing().isPlaying)
+                        _sfxManager.GetBreathing().Play();
+
                     _animator.SetBool("Run", true);
                 }
 
                 else
                 {
                     _animator.SetBool("Idle", true);
+
+                    if (!_sfxManager.GetGrowling().isPlaying)
+                        _sfxManager.GetGrowling().Play();
+
                     _animator.SetBool("Walk", false);
                 }
             }
@@ -155,6 +173,9 @@ public class Enemy_Movement : MonoBehaviour
 
         _isChasing = false;
 
+        if (!_sfxManager.GetGrowling().isPlaying)
+            _sfxManager.GetGrowling().Play();
+
         _navMeshAgent.SetDestination(_startingPosition);
     }
 
@@ -175,6 +196,9 @@ public class Enemy_Movement : MonoBehaviour
         StopCoroutine(_chaseRoutine);
 
         _navMeshAgent.SetDestination(_startingPosition);
+
+        if (!_sfxManager.GetGrowling().isPlaying)
+            _sfxManager.GetGrowling().Play();
 
         _isChasing = false;
     }
