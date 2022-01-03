@@ -35,6 +35,8 @@ public class Enemy_Movement : MonoBehaviour
 
     private void Awake()
     {
+        if (_enemy.EnemyType == EEnemy.Friendly)
+            _isHappy = true;
         _lookRadius = _enemy.LookRadius;
         _rotationVariable = _enemy.RotationVariable;
         _interestTime = _enemy.InterestTime;
@@ -89,6 +91,13 @@ public class Enemy_Movement : MonoBehaviour
                     _animator.SetBool("Walk", false);
                 }
             }
+        }
+        else if(_isHappy)
+        {
+            _animator.SetBool("Idle", true);
+            _animator.SetBool("Walk", false);
+            _animator.SetBool("Run", false);
+
         }
     }
 

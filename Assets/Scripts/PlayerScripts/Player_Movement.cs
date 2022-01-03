@@ -27,6 +27,7 @@ public class Player_Movement : MonoBehaviour
     private bool _canJump = true;
     private bool _canSlow = true;
     private bool _canSprint = true;
+    private bool _canNormal = true;
 
     private void Awake()
     {
@@ -91,6 +92,8 @@ public class Player_Movement : MonoBehaviour
 
         float defaultSpeed = _normalSpeed;
 
+        
+
         if (Input.GetKey(KeyCode.LeftShift) && _canSprint)
         {
             _animator.SetBool("Idle", false);
@@ -113,7 +116,12 @@ public class Player_Movement : MonoBehaviour
         _playerVisual.transform.rotation = Quaternion.RotateTowards(_playerVisual.transform.rotation, Quaternion.Euler(_direction.x, _direction.y, _direction.z), _rotationSpeed * Time.deltaTime);
 
         if (xPos != 0 || zPos != 0)
+        {
             _animator.SetBool("Idle", false);
+            _animator.SetBool("Walk", true);
+
+        }
+
 
         Vector3 moveDirection = transform.right * xPos + transform.forward * zPos;
         _characterController.Move(moveDirection * defaultSpeed * Time.deltaTime);
@@ -171,5 +179,6 @@ public class Player_Movement : MonoBehaviour
         _canJump = false;
         _canSlow = false;
         _canSprint = false;
+        _canNormal = false;
     }
 }
