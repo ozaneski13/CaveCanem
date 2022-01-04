@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SFXManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource[] _auidoSources = null;
+    [SerializeField] private AudioSource[] _audioSources = null;
 
     public static SFXManager Instance;
 
@@ -14,37 +14,52 @@ public class SFXManager : MonoBehaviour
     }
     #endregion
 
-    public AudioSource GetBark()
+    public AudioSource GetDogBark()
     {
-        return _auidoSources[0];
+        return _audioSources[0];
     }
 
-    public AudioSource GetBreathing()
+    public AudioSource GetDogBreath()
     {
-        return _auidoSources[1];
+        return _audioSources[1];
     }
 
-    public AudioSource GetGrowling()
+    public AudioSource GetDogEat()
     {
-        return _auidoSources[2];
+        return _audioSources[2];
+    }
+
+    public AudioSource GetDogGrowl()
+    {
+        return _audioSources[3];
+    }
+
+    public AudioSource GetFlashlightClick()
+    {
+        return _audioSources[4];
     }
 
     public AudioSource GetHumanRun()
     {
-        return _auidoSources[3];
+        return _audioSources[5];
     }
 
     public AudioSource GetHumanScream()
     {
-        int rand = Random.Range(4, 8);
+        int rand = Random.Range(6, 10);
 
-        return _auidoSources[rand];
+        return _audioSources[rand];
     }
 
     public AudioSource GetHumanWalk()
     {
-        int rand = Random.Range(8, 10);
+        int rand = Random.Range(10, 12);
 
-        return _auidoSources[rand];
+        return _audioSources[rand];
+    }
+
+    public AudioSource GetMoneySpend()
+    {
+        return _audioSources[12];
     }
 }

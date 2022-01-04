@@ -24,8 +24,17 @@ public abstract class Enemy : MonoBehaviour, IEnemy
     public Action OnEnemyHappy;
     public Action<string, EEnemy> OnWrongFeed;
 
+    private SFXManager _sfxManager = null;
+
+    private void Start()
+    {
+        _sfxManager = SFXManager.Instance;
+    }
+
     public void GetFeeded(Collectable collectable)
     {
+        _sfxManager.GetDogEat().Play();
+
         switch(_enemyType)
         {
             case EEnemy.Aggressive:

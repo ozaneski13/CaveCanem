@@ -21,6 +21,7 @@ public class Market : MonoBehaviour
     public Action OnCollectablesUpdated;
 
     private Player _player = null;
+    private SFXManager _sfxManager = null;
 
     private int _coins;
 
@@ -36,6 +37,7 @@ public class Market : MonoBehaviour
     private void Start()
     {
         _player = Player.Instance;
+        _sfxManager = SFXManager.Instance;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -89,6 +91,8 @@ public class Market : MonoBehaviour
 
         _player.FoodCount++;
 
+        _sfxManager.GetMoneySpend().Play();
+
         OnFoodBought?.Invoke(_foodPrice);
         OnCollectablesUpdated?.Invoke();
     }
@@ -105,6 +109,8 @@ public class Market : MonoBehaviour
 
         _player.BoneCount++;
 
+        _sfxManager.GetMoneySpend().Play();
+
         OnBoneBought?.Invoke(_bonePrice);
         OnCollectablesUpdated?.Invoke();
     }
@@ -120,6 +126,8 @@ public class Market : MonoBehaviour
         _coins -= _healthPrice;
 
         _player.HealthCount++;
+
+        _sfxManager.GetMoneySpend().Play();
 
         OnHealthBought?.Invoke(_healthPrice);
         OnCollectablesUpdated?.Invoke();

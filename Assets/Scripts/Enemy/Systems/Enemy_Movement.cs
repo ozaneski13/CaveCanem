@@ -81,8 +81,8 @@ public class Enemy_Movement : MonoBehaviour
                 {
                     _animator.SetBool("Walk", true);
 
-                    if (!_sfxManager.GetBreathing().isPlaying)
-                        _sfxManager.GetBreathing().Play();
+                    if (!_sfxManager.GetDogBreath().isPlaying)
+                        _sfxManager.GetDogBreath().Play();
 
                     _animator.SetBool("Run", false);
                 }
@@ -91,8 +91,8 @@ public class Enemy_Movement : MonoBehaviour
                 {
                     _animator.SetBool("Walk", false);
 
-                    if (!_sfxManager.GetBreathing().isPlaying)
-                        _sfxManager.GetBreathing().Play();
+                    if (!_sfxManager.GetDogBreath().isPlaying)
+                        _sfxManager.GetDogBreath().Play();
 
                     _animator.SetBool("Run", true);
                 }
@@ -101,8 +101,8 @@ public class Enemy_Movement : MonoBehaviour
                 {
                     _animator.SetBool("Idle", true);
 
-                    if (!_sfxManager.GetGrowling().isPlaying)
-                        _sfxManager.GetGrowling().Play();
+                    if (!_sfxManager.GetDogGrowl().isPlaying)
+                        _sfxManager.GetDogGrowl().Play();
 
                     _animator.SetBool("Walk", false);
                 }
@@ -173,8 +173,8 @@ public class Enemy_Movement : MonoBehaviour
 
         _isChasing = false;
 
-        if (!_sfxManager.GetGrowling().isPlaying)
-            _sfxManager.GetGrowling().Play();
+        if (!_sfxManager.GetDogGrowl().isPlaying)
+            _sfxManager.GetDogGrowl().Play();
 
         _navMeshAgent.SetDestination(_startingPosition);
     }
@@ -197,8 +197,8 @@ public class Enemy_Movement : MonoBehaviour
 
         _navMeshAgent.SetDestination(_startingPosition);
 
-        if (!_sfxManager.GetGrowling().isPlaying)
-            _sfxManager.GetGrowling().Play();
+        if (!_sfxManager.GetDogGrowl().isPlaying)
+            _sfxManager.GetDogGrowl().Play();
 
         _isChasing = false;
     }

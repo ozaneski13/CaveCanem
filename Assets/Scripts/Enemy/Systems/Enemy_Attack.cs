@@ -92,9 +92,9 @@ public class Enemy_Attack : MonoBehaviour
 
         _animator.SetBool("Attack", true);
 
-        if (!_sfxManager.GetBark().isPlaying)
+        if (!_sfxManager.GetDogBark().isPlaying)
         {
-            _sfxManager.GetBark().Play();
+            _sfxManager.GetDogBark().Play();
         }
 
         _player.TakeDamage(_damage, _isPoisoned);
