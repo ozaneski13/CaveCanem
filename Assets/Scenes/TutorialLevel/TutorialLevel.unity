@@ -42849,6 +42849,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1907059832}
     m_Modifications:
+    - target: {fileID: 5694425992476251845, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
+      propertyPath: _damage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694425992476251845, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
+      propertyPath: _enemyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694425992476251845, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
+      propertyPath: _durationBetweenAttacks
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6837122737971523072, guid: de0516b3c11a79c428bbe22c33a3771b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 15.2105465
@@ -77348,11 +77360,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4680742449397722368, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4680742449397722368, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
       propertyPath: _boneCount
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4680742449397722368, guid: 6a0b447444a0cd645be6a1ded6612f36, type: 3}
       propertyPath: _coinCount

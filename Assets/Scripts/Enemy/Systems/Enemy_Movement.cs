@@ -92,11 +92,13 @@ public class Enemy_Movement : MonoBehaviour
                 }
             }
         }
-        else if(_isHappy)
+        else if(_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
         {
             _animator.SetBool("Idle", true);
             _animator.SetBool("Walk", false);
             _animator.SetBool("Run", false);
+            //_navMeshAgent.SetDestination(_enemy.transform.position);
+            
 
         }
     }
@@ -165,6 +167,7 @@ public class Enemy_Movement : MonoBehaviour
         _isChasing = false;
 
         _navMeshAgent.SetDestination(_startingPosition);
+        _animator.SetBool("Walk", true);
     }
 
     private void OnDrawGizmosSelected()
