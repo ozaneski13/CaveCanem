@@ -35,6 +35,9 @@ public class Enemy_Attack : MonoBehaviour
         _damage = _enemy.Damage;
         _durationBetweenAttacks = _enemy.DurationBetweenAttacks;
 
+        if (_enemy.EnemyType == EEnemy.Friendly)
+            _isHappy = true;
+
         RegisterToEvents();
     }
 
