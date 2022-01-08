@@ -112,6 +112,14 @@ public class Player_Movement : MonoBehaviour
             source = _sfxManager.GetHumanWalk(); 
         }
 
+        if (defaultSpeed == _normalSpeed)
+        {
+            _animator.SetBool("Idle", false);
+            _animator.SetBool("Walk", true);
+
+            source = _sfxManager.GetHumanWalk();
+        }
+
         float xPos = Input.GetAxis("Horizontal");
         float zPos = Input.GetAxis("Vertical");
 
@@ -121,8 +129,12 @@ public class Player_Movement : MonoBehaviour
 
         if (xPos != 0 || zPos != 0)
             _animator.SetBool("Idle", false);
+
         if (xPos == 0 && zPos == 0)
+        {
             source = null;
+            _animator.SetBool("Idle", true);
+        }
 
         Vector3 moveDirection = transform.right * xPos + transform.forward * zPos;
         _characterController.Move(moveDirection * defaultSpeed * Time.deltaTime);
