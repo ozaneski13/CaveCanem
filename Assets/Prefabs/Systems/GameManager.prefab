@@ -57,12 +57,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7e2bfe075e5e34ba3937c3bb63f133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinCount: 0
+  _coinCount: 100
   _maximumHealth: 100
   _currentLevel: 1
   _healthCount: 0
   _boneCount: 3
-  _foodCount: 3
+  _foodCount: 2
 --- !u!114 &1111722527384953149
 MonoBehaviour:
   m_ObjectHideFlags: 0

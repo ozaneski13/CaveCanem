@@ -193,7 +193,8 @@ public class Enemy_Movement : MonoBehaviour
     {
         _isPlayerDead = true;
 
-        StopCoroutine(_chaseRoutine);
+        if (_chaseRoutine != null)
+            StopCoroutine(_chaseRoutine);
 
         _navMeshAgent.SetDestination(_startingPosition);
 

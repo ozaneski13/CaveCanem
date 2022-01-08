@@ -17,12 +17,9 @@ public class LevelEndMenu : MonoBehaviour
 
         Time.timeScale = _timeScale;
 
-        UpdatePlayer();
-    }
-
-    private void Start()
-    {
         _player = Player.Instance;
+
+        UpdatePlayer();
     }
 
     public void LoadNextLevel()
@@ -37,12 +34,6 @@ public class LevelEndMenu : MonoBehaviour
         Debug.Log("Quit game.");
 
         Application.Quit();
-    }
-
-    public void OpenMarket()
-    {
-        //_marketUI.SetActive(true);
-        gameObject.SetActive(false);
     }
 
     private void UpdatePlayer()
