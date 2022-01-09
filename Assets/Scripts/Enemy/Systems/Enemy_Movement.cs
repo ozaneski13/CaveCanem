@@ -16,6 +16,8 @@ public class Enemy_Movement : MonoBehaviour
 
     private SFXManager _sfxManager = null;
 
+    private LevelEndMenu _levelEndMenu = null;
+
     private Vector3 _startingPosition = Vector3.zero;
 
     private IEnumerator _chaseRoutine = null;
@@ -32,6 +34,8 @@ public class Enemy_Movement : MonoBehaviour
     private bool _isHappy = false;
 
     private bool _isPlayerDead = false;
+
+    private bool _isLevelEnded = false;
 
     public Action OnAttack;
 
@@ -54,6 +58,7 @@ public class Enemy_Movement : MonoBehaviour
     {
         _player = Player.Instance;
         _sfxManager = SFXManager.Instance;
+        _levelEndMenu = LevelEndMenu.Instance;
 
         _startingPosition = transform.position;
 
@@ -62,7 +67,7 @@ public class Enemy_Movement : MonoBehaviour
 
     private void Update()
     {
-        if (_canMove && !_isHappy && !_isPlayerDead)
+        if (_canMove && !_isHappy && !_isPlayerDead && !_isLevelEnded)
         {
             _distance = Vector3.Distance(_player.transform.position, transform.position);
 
@@ -133,12 +138,23 @@ public class Enemy_Movement : MonoBehaviour
     private void RegisterToLateEvents()
     {
         _player.OnDeath += OnPlayerDeath;
+
+        _levelEndMenu.OnLevelEnded += OnLevelEnded;
     }
 
     private void UnregisterFromLateEvents()
     {
         if (_player != null)
             _player.OnDeath -= OnPlayerDeath;
+
+        _levelEndMenu.OnLevelEnded -= OnLevelEnded;
+    }
+
+    private void OnLevelEnded()
+    {
+        _isLevelEnded = true;
+
+        _navMeshAgent.SetDestination(_startingPosition);
     }
 
     private void FaceTarget()

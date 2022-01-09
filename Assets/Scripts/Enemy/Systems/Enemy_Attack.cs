@@ -11,6 +11,7 @@ public class Enemy_Attack : MonoBehaviour
 
     private Player _player = null;
     private SFXManager _sfxManager = null;
+    private LevelEndMenu _levelEndMenu = null;
 
     public Action OnAnimCompleted;
 
@@ -24,6 +25,8 @@ public class Enemy_Attack : MonoBehaviour
     private bool _isHappy = false;
     private bool _canAttack = true;
     private bool _isPoisoned = false;
+
+    private bool _isLevelEnded = false;
 
     private void Awake()
     {
@@ -45,6 +48,7 @@ public class Enemy_Attack : MonoBehaviour
     {
         _player = Player.Instance;
         _sfxManager = SFXManager.Instance;
+        _levelEndMenu = LevelEndMenu.Instance;
 
         RegisterToLateEvents();
     }
@@ -72,17 +76,25 @@ public class Enemy_Attack : MonoBehaviour
     private void RegisterToLateEvents()
     {
         _player.OnDeath += OnPlayerDeath;
+        _levelEndMenu.OnLevelEnded += OnLevelEnded;
     }
 
     private void UnregisterFromLateEvents()
     {
         if (_player != null)
             _player.OnDeath -= OnPlayerDeath;
+
+        _levelEndMenu.OnLevelEnded -= OnLevelEnded;
+    }
+
+    private void OnLevelEnded()
+    {
+        _isLevelEnded = true;
     }
 
     private void Attack()
     {
-        if (_isAttacking || _isHappy || !_canAttack)
+        if (_isAttacking || _isHappy || !_canAttack || _isLevelEnded)
             return;
 
         _attackRoutine = AttackRoutine();

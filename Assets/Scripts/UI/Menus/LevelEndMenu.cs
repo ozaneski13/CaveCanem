@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class LevelEndMenu : MonoBehaviour
 {
@@ -11,8 +12,17 @@ public class LevelEndMenu : MonoBehaviour
 
     private Player _player = null;
 
+    public Action OnLevelEnded;
+
+    public static LevelEndMenu Instance;
+
     private void Awake()
     {
+        if (Instance == null)
+            Instance = this;
+
+        OnLevelEnded?.Invoke();
+
         _tutorials.SetActive(false);
 
         Time.timeScale = _timeScale;
