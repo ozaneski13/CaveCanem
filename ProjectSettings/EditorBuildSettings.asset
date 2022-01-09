@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level7_z.unity
     guid: c8bb2d114275d724f942a92de172ccb9
+  - enabled: 1
+    path: Assets/Scenes/Level8_z.unity
+    guid: 13c5b974ebd10034a9765ad1a9bc021f
   m_configObjects: {}

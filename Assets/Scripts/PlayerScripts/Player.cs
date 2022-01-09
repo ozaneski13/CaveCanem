@@ -90,6 +90,7 @@ public class Player : MonoBehaviour
             Instance = this;
 
         LoadSave();
+        Time.timeScale = 1f;
     }
     #endregion
 
