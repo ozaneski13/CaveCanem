@@ -2,7 +2,6 @@ using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-//Save the game after success.
 //Persistent data path: %userprofile%\AppData\LocalLow\<companyname>\<productname>
 
 public static class SaveSystem

@@ -5,6 +5,8 @@ public class CollectableListener : MonoBehaviour
 {
     private GameObject[] _collectables = null;
 
+    private Player _player = null;
+
     private int _coinCount = 0;
     public int CoinCount => _coinCount;
 
@@ -28,6 +30,11 @@ public class CollectableListener : MonoBehaviour
         RegisterToEvents();
     }
 
+    private void Start()
+    {
+        _player = Player.Instance;
+    }
+
     private void GatherCollectables()
     {
         _collectables = GameObject.FindGameObjectsWithTag("Collectable");
@@ -44,24 +51,28 @@ public class CollectableListener : MonoBehaviour
         if (collectable is Coin)
         {
             _coinCount++;
+            _player.Coin++;
             OnCoinCollected?.Invoke();
         }
 
         else if (collectable is Bone)
         {
             _boneCount++;
+            _player.BoneCount++;
             OnBoneCollected?.Invoke();
         }
 
         else if (collectable is Health)
         {
             _healthCount++;
+            _player.HealthCount++;
             OnHealthCollected?.Invoke();
         }
 
         else if (collectable is Food)
         {
             _foodCount++;
+            _player.FoodCount++;
             OnFoodCollected?.Invoke();
         }
     }

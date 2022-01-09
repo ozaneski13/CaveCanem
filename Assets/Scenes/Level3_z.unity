@@ -1830,7 +1830,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ac32da9b2802c7640af8e880ea5bd04f, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ac32da9b2802c7640af8e880ea5bd04f, type: 3}
       propertyPath: m_LocalScale.x
@@ -6934,6 +6934,14 @@ PrefabInstance:
     - target: {fileID: 383841770588801594, guid: 57028025a1d33524e99ad32f279bc486, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 656271694651061814, guid: 57028025a1d33524e99ad32f279bc486, type: 3}
+      propertyPath: m_Center.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 656271694651061814, guid: 57028025a1d33524e99ad32f279bc486, type: 3}
+      propertyPath: m_Center.z
+      value: 0.085
       objectReference: {fileID: 0}
     - target: {fileID: 1011870672047360323, guid: 57028025a1d33524e99ad32f279bc486, type: 3}
       propertyPath: m_Layer
@@ -32754,7 +32762,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f994e2b57b21a0048aed8a95deaf43cb, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f994e2b57b21a0048aed8a95deaf43cb, type: 3}
       propertyPath: m_LocalScale.x
@@ -34775,7 +34783,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 641d53b35cc282a4f9faa44e16380fcb, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 641d53b35cc282a4f9faa44e16380fcb, type: 3}
       propertyPath: m_LocalScale.x
@@ -37528,7 +37536,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 55c5ffdf343a1df43bda7545dec54ecc, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55c5ffdf343a1df43bda7545dec54ecc, type: 3}
       propertyPath: m_LocalScale.x
@@ -74264,6 +74272,14 @@ PrefabInstance:
     - target: {fileID: 383841770588801594, guid: 57028025a1d33524e99ad32f279bc486, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 656271694651061814, guid: 57028025a1d33524e99ad32f279bc486, type: 3}
+      propertyPath: m_Center.x
+      value: -0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 656271694651061814, guid: 57028025a1d33524e99ad32f279bc486, type: 3}
+      propertyPath: m_Center.z
+      value: 0.086
       objectReference: {fileID: 0}
     - target: {fileID: 1011870672047360323, guid: 57028025a1d33524e99ad32f279bc486, type: 3}
       propertyPath: m_Layer

@@ -9,7 +9,7 @@ public class DummySaveFile : MonoBehaviour
     [SerializeField] private int _boneCount = 0;
     [SerializeField] private int _foodCount = 0;
 
-    void Start()
+    private void Start()
     {
         Player player = new Player();
 
